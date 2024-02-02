@@ -162,7 +162,7 @@ Follow the steps below to get the new version of the code:
 
 [img_projects]:images/projects.png "Solution for chapter five with its projects"
 [img_clone_vs]:images/clone_vs.png "Clone a project in Visual Studio"
-[img_clone_url]:images/clone_url.png "Copy repository url"
+[img_clone_url]:images/Clone_url.png "Copy repository url"
 [img_cloned_repo_overview]:images/cloned_repo_overview.png "Cloned repository overview"
 [img_startup_project]:images/startup_project.png "Choose startup project"
 [img_group_tests]:images/group_tests.png "Group tests by project"
