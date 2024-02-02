@@ -52,9 +52,26 @@ Start Visual Studio and select "Clone or check out code".
 
 Now you have a local copy of the online repository in which you can complete your exercises.
 
-![alt text][img_cloned_repo_overview]
+### Make a link with the original repository of the lectors (upstream)
+Exercises will be added and changes will be made during the course. These changes will happen in the original repository made by the lectors (your online repository is a copy of this repository). We will call the original repository of the lectors the **upstream** repository.
+Your personal online repository will be called the **origin** from now on.
 
-Double click the solution that contains the chapter exercises you want to work on. Alternatively, you can just double click a solution file (.sln) from an explorer window to start up Visual Studio with the solution opened up.
+You need a way to pull changes in the *upstream* repository into the *origin* repository. Follow the instructions below to make this possible. 
+
+> [!IMPORTANT] 
+> **It is important that you execute the instructions before pushing your first own commit to the origin!!**
+
+* In Visual Studio, navigate in the menu to *Git -> Manage Remotes...*
+* The *origin* (your personal online repo) is already configured
+* Add a new remote named **upstream** that points to the original online repository made by the lectors.
+     * Click on the *Add* button
+          * Name: *upstream*
+          * Fetch: *https://github.com/pxlit-projects/Guts-DotNetProgrAdv-23-24*
+          * Push: *https://github.com/pxlit-projects/Guts-DotNetProgrAdv-23-24*
+     * Click on *Save*
+     * Open a command prompt and navigate to the folder that contains your local copy of the *origin* repository. Tip: in Visual Studio you can open a command prompt in the correct folder via the menu: *Git -> Open in Command Prompt*
+     * Execute the command **git pull upstream main --allow-unrelated-histories**. This command downloads the commits made by the lectors and tries to merge them with your last local commit.
+     * Execute the command **git push orgin main**. This commands will push (upload) the local commits to your online repository (*origin*).  
 
 ### Register on [guts-web.pxl.be](https://guts-web.pxl.be)
 
@@ -63,20 +80,13 @@ After registration you will have the credentials you need to succesfully run aut
 
 #### Start working on an exercise
 
-Let's assume you want to make exercise 5 of chapter 5.
-
-1. Open the solution in the folder "Chapter 5". You can do this by doubleclicking on the **.sln** file from an explorer window or by opening visual studio, clicking on *File &rightarrow; Open a project or solution* and selecting the **.sln** file.
+1. Open the solution of the exercise. You can do this by doubleclicking on the **.sln** file from an explorer window or by opening visual studio, clicking on *File &rightarrow; Open a project or solution* and selecting the **.sln** file.
 
 2. **Build the solution** (Menu: Build &rightarrow; Build Solution or Ctrl+Shift+B)
-3. Locate the project "Exercise 5" and set it as your startup project
 
-![alt text][img_startup_project]
-
-4. Write the code you need to write
+3. Write the code you need to write
 
 #### Run the automated tests
-
-Let's assume you are working on exercise 5 of chapter 5.
 
 1. Open the *Test Explorer* window (Menu: Test &rightarrow; Test Explorer)
 2. In the top right corner, click on the *group by* button and make sure the automated tests are grouped by project (see the picture below). If you don't see any tests appearing, you probably should (re)build your solution.
@@ -117,7 +127,7 @@ Although it is not a guarantee, having all tests green is a good indication that
 
 Test results of all students are sent to the Guts servers.
 You can check your progress and compare with the averages of other students via [guts-web.pxl.be](https://guts-web.pxl.be).
-Login, go to ".NET Essentials" in the navigation bar and select the chapter you want to view.
+Login, go to ".NET Advanced" in the navigation bar and select the chapter (module) you want to view.
 
 ![alt text][img_chapter_contents]
 
@@ -141,10 +151,23 @@ It is recommended to **do a git commit every time you complete an exercise**.
 
 #### Get a new version of the start code
 
-It could happen that the lecturers fix bugs in the automated tests of the startcode or add new exercises and/or tests.
+It could happen that the lecturers fix bugs in the automated tests of the startcode or add new exercises and/or tests. These changes will happen in the **upstream** repository and you will need to get those changes in the **origin** repository.
 Follow the steps below to get the new version of the code:
 
 - Commit your work locally (see previous section)
-- Go to *Git Changes*
-- In the upper right corner, click the three dots *...*
-- Select *Pull from* &rightarrow; origin. This will merge your saved commit with the online commit in your local repository.
+- Open a command prompt and navigate to the folder that contains your local copy of the *origin* repository. Tip: in Visual Studio you can open a command prompt in the correct folder via the menu: *Git -> Open in Command Prompt*
+- Enter the command *git pull upstream main*. This command downloads the new commits from the *upstream* repository and tries to merge them with your last local commit.
+- Attention: local changes that were not in a local commit will get lost doing a pull
+- Close the command prompt. Navigate to the *Branch History* window (*Git -> View Branch History*). You should see the commits (your local commits, the commits of the lectors and a merge commit). Push (upload) these local commits to your online repository (*origin*) by clicking on the *Push* link
+
+[img_projects]:Images/projects.png "Solution for chapter five with its projects"
+[img_clone_vs]:Images/clone_vs.png "Clone a project in Visual Studio"
+[img_clone_url]:Images/clone_url.png "Copy repository url"
+[img_cloned_repo_overview]:Images/cloned_repo_overview.png "Cloned repository overview"
+[img_startup_project]:Images/startup_project.png "Choose startup project"
+[img_group_tests]:Images/group_tests.png "Group tests by project"
+[img_test_detail]:Images/test_detail.png "Details of a test result"
+[img_login_vs]:Images/login_vs.png "Visual studio login"
+[img_chapter_contents]:Images/chaptercontents.png "Chapter contents"
+[img_commit_your_work]:Images/commit_your_work.png "Commit your work"
+[img_git_changes]:Images/git_changes.png "Git Changes"
