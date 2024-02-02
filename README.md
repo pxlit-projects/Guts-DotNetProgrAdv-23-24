@@ -30,7 +30,7 @@ The idea is that you make an online copy of the repository containing the startc
 
 To proceed you need a GitHub account. If you don't have one yet, register youself via https://github.com. 
 
-s://cNow go to **https://classroom.github.com/a/HZnSbgEb**
+Now go to **https://classroom.github.com/a/HZnSbgEb**
 
 Accept the assignment and GitHub will make that online copy of the repository containing the startcode. 
 GitHub Classroom will show you the url of your repository. Navigate to this url and mark it as a favorite in your browser.
