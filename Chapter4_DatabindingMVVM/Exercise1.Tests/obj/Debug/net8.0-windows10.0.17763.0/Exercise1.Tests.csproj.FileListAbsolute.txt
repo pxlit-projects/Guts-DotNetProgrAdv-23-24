@@ -1,7 +1,0 @@
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\bin\Debug\net8.0-windows10.0.17763.0\CoverletSourceRootsMapping_Exercise1.Tests
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.csproj.AssemblyReference.cache
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.AssemblyInfoInputs.cache
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.AssemblyInfo.cs
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.csproj.CoreCompileInputs.cache
-C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter4_DatabindingMVVM\Exercise1.Tests\obj\Debug\net8.0-windows10.0.17763.0\Exercise1.Tests.sourcelink.json

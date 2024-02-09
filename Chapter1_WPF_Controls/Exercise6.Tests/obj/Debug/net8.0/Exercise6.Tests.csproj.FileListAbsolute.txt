@@ -1,5 +1,0 @@
-C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise6.Tests\obj\Debug\net8.0\Exercise6.Tests.csproj.AssemblyReference.cache
-C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise6.Tests\obj\Debug\net8.0\Exercise6.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise6.Tests\obj\Debug\net8.0\Exercise6.Tests.AssemblyInfoInputs.cache
-C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise6.Tests\obj\Debug\net8.0\Exercise6.Tests.AssemblyInfo.cs
-C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise6.Tests\obj\Debug\net8.0\Exercise6.Tests.csproj.CoreCompileInputs.cache
