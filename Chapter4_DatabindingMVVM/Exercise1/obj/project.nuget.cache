@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NtaLS19HEUHPGW+K5Uf/G7ZihDk6vK4hGN6I4PkP3ZeLWxpRjHEufX3JteZPCLeWM/IGRTc97TKK+TObqSNoHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\20002650\\Documents\\PXL\\GithubGutProgrAdv23-24\\Guts-DotNetProgrAdv-23-24\\Chapter4_DatabindingMVVM\\Exercise1\\Exercise1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\20002650\\.nuget\\packages\\guts.client.wpf\\1.1.0\\guts.client.wpf.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,4 @@
+C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise3\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise3\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise3\obj\Debug\net8.0-windows\Exercise3_MarkupCompile.cache
+C:\Users\20002650\source\repos\Chapter1_WPF_Controls\Exercise3\obj\Debug\net8.0-windows\Exercise3_MarkupCompile.lref

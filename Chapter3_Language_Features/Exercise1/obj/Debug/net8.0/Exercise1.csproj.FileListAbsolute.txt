@@ -1,0 +1,15 @@
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.AssemblyInfoInputs.cache
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.AssemblyInfo.cs
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.csproj.CoreCompileInputs.cache
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.sourcelink.json
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\bin\Debug\net8.0\Exercise1.exe
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\bin\Debug\net8.0\Exercise1.deps.json
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\bin\Debug\net8.0\Exercise1.runtimeconfig.json
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\bin\Debug\net8.0\Exercise1.dll
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\bin\Debug\net8.0\Exercise1.pdb
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.dll
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\refint\Exercise1.dll
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.pdb
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\Exercise1.genruntimeconfig.cache
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise1\obj\Debug\net8.0\ref\Exercise1.dll

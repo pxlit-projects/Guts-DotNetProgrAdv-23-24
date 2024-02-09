@@ -1,0 +1,4 @@
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise2\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise2\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise2\obj\Debug\net8.0-windows\Exercise2_MarkupCompile.cache
+C:\Users\20002650\Documents\PXL\GithubProgrammingAdvanced\Programming-Advanced\Guts-23-24\Chapter3_Language_Features\Exercise2\obj\Debug\net8.0-windows\Exercise2_MarkupCompile.lref

@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Exercise1/1.0.0": {
+        "dependencies": {
+          "Guts.Client.WPF": "1.1.0"
+        },
+        "runtime": {
+          "Exercise1.dll": {}
+        }
+      },
+      "Guts.Client.WPF/1.1.0": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Guts.Client.WPF.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercise1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Guts.Client.WPF/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-swsIjr+JMF7O9gxsZmpSreCOOZyofsz+6PVsLwDj0DWA9XmIvKfMqCyeLrRUrcB3dUZbJ1mslbX/UZSljrdVFg==",
+      "path": "guts.client.wpf/1.1.0",
+      "hashPath": "guts.client.wpf.1.1.0.nupkg.sha512"
+    }
+  }
+}
