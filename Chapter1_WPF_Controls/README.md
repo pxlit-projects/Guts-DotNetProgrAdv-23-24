@@ -1,4 +1,4 @@
-# Exercises - Chapter 2 - WPF Controls
+# Exercises - Chapter 1a - WPF Controls
 
 ## Exercise 1
 Create a WPF application that resembles the following screenshot:
