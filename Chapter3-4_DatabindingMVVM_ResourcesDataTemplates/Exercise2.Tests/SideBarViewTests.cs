@@ -11,7 +11,7 @@ using TestTools;
 namespace Exercise2.Tests;
 
 [Apartment(ApartmentState.STA)]
-[ExerciseTestFixture("progAdvNet", "H04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
     @"Exercise2\View\SideBarView.xaml;Exercise2\View\SideBarView.xaml.cs;")]
 public class SideBarViewTests
 {

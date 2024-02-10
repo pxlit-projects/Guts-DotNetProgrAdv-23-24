@@ -6,7 +6,7 @@ using Moq;
 
 namespace Exercise2.Tests;
 
-[ExerciseTestFixture("progAdvNet", "H04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
     @"Exercise2\ViewModel\ISideBarViewModel.cs;Exercise2\ViewModel\SideBarViewModel.cs;Exercise2\ViewModel\IViewModel.cs;Exercise2\ViewModel\ViewModelBase.cs;")]
 public class SideBarViewModelTests
 {

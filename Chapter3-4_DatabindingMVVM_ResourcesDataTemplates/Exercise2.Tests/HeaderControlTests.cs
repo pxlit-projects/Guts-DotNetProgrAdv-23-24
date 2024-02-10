@@ -6,7 +6,7 @@ using Guts.Client.WPF.TestTools;
 namespace Exercise2.Tests;
 
 [Apartment(ApartmentState.STA)]
-[ExerciseTestFixture("progAdvNet", "H04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
     @"Exercise2\Controls\HeaderControl.xaml;")]
 public class HeaderControlTests
 {

@@ -3,7 +3,7 @@ using Exercise2.Converters;
 
 namespace Exercise2.Tests;
 
-[ExerciseTestFixture("progAdvNet", "H04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
     @"Exercise2\Converters\RatingStarsConverter.cs;")]
 public class RatingStarsConverterTests
 {

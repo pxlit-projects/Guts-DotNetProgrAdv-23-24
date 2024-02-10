@@ -3,7 +3,7 @@ using Exercise2.ViewModel;
 
 namespace Exercise2.Tests;
 
-[ExerciseTestFixture("progAdvNet", "H04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
     @"Exercise2\ViewModel\IMovieDetailViewModel.cs;Exercise2\ViewModel\MovieDetailViewModel.cs;Exercise2\ViewModel\IViewModel.cs;Exercise2\ViewModel\ViewModelBase.cs;")]
 public class MovieDetailViewModelTests
 {
