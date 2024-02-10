@@ -16,11 +16,10 @@ The matching test projects contain **automated tests** that can be run to check 
 The assignments for each chapter can be found in de README.md in the folder of the chapter or by clicking on one of the links below:
 * [Chapter 1 - WPF XAML](Chapter1_WPF_XAML/readme.md)
 * [Chapter 2 - C# Language features](Chapter2_LanguageFeatures/readme.md)
-* [Chapter 3 + 4 - Databinding, MVVM, Resources, Data Templates](Chapter3_DatabindingMVVM/readme.md)
+* [Chapter 3 + 4 - Databinding, MVVM, Resources, Data Templates](Chapter3-4_DatabindingMVVM_ResourcesDataTemplates/readme.md)
 * [Chapter 5 - Onion archtecture](Chapter5_OnionArchitecture/README.md)
-* [Chapter 6 - LINQ](Chapter7_LINQ/readme.md)
-* [Chapter 7 - Entity Framework](Chapter8_EF/readme.md)
-* [Chapter 8 - TDD](Chapter8_TDD/readme.md)
+* [Chapter 6 - Entity Framework](Chapter6_EF/readme.md)
+* [Chapter 7 - TDD](Chapter7_TDD/readme.md)
 
 ## Getting Started
 
