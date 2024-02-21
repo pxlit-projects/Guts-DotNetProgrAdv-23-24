@@ -5,7 +5,7 @@ namespace Exercise2.Tests;
 
 [Apartment(ApartmentState.STA)]
 [ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02",
-    @"Exercise2\Movie.cs")]
+    @"Exercise2\Model\Movie.cs")]
 
 public class MovieTests
 {
