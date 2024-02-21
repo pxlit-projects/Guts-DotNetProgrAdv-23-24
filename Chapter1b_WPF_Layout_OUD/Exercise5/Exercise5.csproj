@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\KRC_Genk_Logo.png" />
+    <None Remove="images\sunset.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\KRC_Genk_Logo.png" />
+    <Resource Include="images\sunset.jpg" />
+  </ItemGroup>
+
+</Project>
