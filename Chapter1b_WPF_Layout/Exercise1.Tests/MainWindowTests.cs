@@ -33,7 +33,7 @@ namespace Exercise1.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise1\MainWindow.xaml.cs";
@@ -45,7 +45,7 @@ namespace Exercise1.Tests
                     "This exercise can be completed by purely working with XAML.");
         }
 
-        [MonitoredTest("All buttons should have some margin")]
+        [MonitoredTest]
         public void _2_AllButtonsShouldHaveSomeMargin()
         {
             Assert.That(_dockPanel, Is.Not.Null, () => "No 'DockPanel' could be found.");
@@ -57,7 +57,7 @@ namespace Exercise1.Tests
                       "E.g. 'Margin=\"4\"'");
         }
 
-        [MonitoredTest("None of the buttons should be aligned to the left or the top")]
+        [MonitoredTest]
         public void _3_NoneOfTheButtonsShouldBeAlignedToTheLeftOrTheTop()
         {
             Assert.That(_dockPanel, Is.Not.Null, () => "No 'DockPanel' could be found.");
@@ -72,7 +72,7 @@ namespace Exercise1.Tests
                 "There is at least one 'Button' that has 'VerticalAlignment' top.");
         }
 
-        [MonitoredTest("Should have a dockpanel with a button and a grid")]
+        [MonitoredTest]
         public void _4_ShouldHaveADockPanelWithAButtonAndAGrid()
         {
             Assert.That(_dockPanel, Is.Not.Null, () => "No 'DockPanel' could be found.");
@@ -95,7 +95,7 @@ namespace Exercise1.Tests
                 "Multiple 'Grid' elements are found. There should be only one 'Grid' in the XAML.");
         }
 
-        [MonitoredTest("Should have a stackpanel in the right button")]
+        [MonitoredTest]
         public void _5_ShouldHaveAStackPanelInTheRightButton()
         {
             Assert.That(_stackPanel, Is.Not.Null, () => "No 'StackPanel' could be found.");
@@ -123,7 +123,7 @@ namespace Exercise1.Tests
                 "All 'TextBlock' elements inside the 'StackPanel' should have a non empty Text.");
         }
 
-        [MonitoredTest("Should have a grid with 4 cells arranged correctly")]
+        [MonitoredTest]
         public void _6_ShouldHaveAGridWith4CellsArrangedCorrectly()
         {
             AssertGridHas4Cells();
@@ -145,7 +145,7 @@ namespace Exercise1.Tests
                 () => "The second column of the 'Grid' should take up the remaining space.");
         }
 
-        [MonitoredTest("The grid should have the correct element in each cell")]
+        [MonitoredTest]
         public void _7_TheGridShouldHaveTheCorrectElementInEachCell()
         {
             AssertGridHas4Cells();
@@ -181,7 +181,7 @@ namespace Exercise1.Tests
                 () => "No 'WrapPanel' found in cell (1,1).");
         }
 
-        [MonitoredTest("The wrappanel should have at least 5 buttons with some padding")]
+        [MonitoredTest]
         public void _8_TheWrapPanelShouldHaveAtLeast5Buttons()
         {
             Assert.That(_wrapPanel, Is.Not.Null, () => "No 'WrapPanel' could be found.");

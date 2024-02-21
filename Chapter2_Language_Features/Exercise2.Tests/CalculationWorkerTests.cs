@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Exercise2.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise02", @"Exercise2\CalculationWorker.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise02", @"Exercise2\CalculationWorker.cs")]
     public class CalculationWorkerTests
     {
         private CalculationWorker _worker;
@@ -24,13 +24,13 @@ namespace Exercise2.Tests
             _receivedEventArgs = new List<CalculationEventArgs>();
         }
 
-        [MonitoredTest("CalculationWorker - Should have a CalculationCompleted event")]
+        [MonitoredTest]
         public void ShouldHaveACalculationCompletedEvent()
         {
             EventHelper.AssertAndRetrieveEventInfo();
         }
 
-        [MonitoredTest("CalculationCompleteHandler - CalculationEventArgs - Should not have been changed")]
+        [MonitoredTest]
         public void CalculationCompleteHandler_CalculationEventArgs_ShouldNotHaveBeenChanged()
         {
             string calculationCompleteHandlerContentHash = Solution.Current.GetFileHash(@"Exercise2\CalculationCompleteHandler.cs");
@@ -40,7 +40,8 @@ namespace Exercise2.Tests
             Assert.That(calculationEventArgsContentHash, Is.EqualTo("00-FB-FD-6E-5C-BF-F2-08-D9-7B-02-36-54-C3-9C-C6"));
         }
 
-        [MonitoredTest("CalculationWorker - DoWork - Should invoke the CalculationCompleted event after each calculation")]        public void DoWork_ShouldInvokeTheCalculationCompletedEventAfterEachCalculation()
+        [MonitoredTest]
+        public void DoWork_ShouldInvokeTheCalculationCompletedEventAfterEachCalculation()
         {
             //Arrange
             EventInfo eventInfo = EventHelper.AssertAndRetrieveEventInfo();
@@ -81,7 +82,7 @@ namespace Exercise2.Tests
             }
         }
 
-        [MonitoredTest("CalculationWorker - DoWork - Should not invoke the CalculationCompleted event when there are so subscribers")]
+        [MonitoredTest]
         public void DoWork_NoSubscribersOnTheCalculationCompletedEvent_ShouldNotInvokeTheEvent()
         {
             EventHelper.AssertAndRetrieveEventInfo();

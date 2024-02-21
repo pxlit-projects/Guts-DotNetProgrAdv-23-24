@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 
 namespace Exercise1.Tests
 {
-        [ExerciseTestFixture("progAdvNet", "H02", "Exercise01", 
+        [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", 
             @"Exercise1\RandomExtensions.cs;
-            Exercise1\Balloon.cs")]
+    Exercise1\Balloon.cs")]
     public class RandomExtensionsTests
     {
         private TypeInfo _randomExtensionsTypeInfo;
@@ -30,27 +30,27 @@ namespace Exercise1.Tests
             _random = new Random();
         }
 
-        [MonitoredTest("There should be a RandomExtensions class")]
+        [MonitoredTest]
         public void _01_ShouldHaveARandomExtensionsClass()
         {
             Assert.That(_randomExtensionsTypeInfo, Is.Not.Null, "Cannot find a type with the name 'RandomExtensions'.");
             Assert.That(_randomExtensionsTypeInfo.IsAbstract && _randomExtensionsTypeInfo.IsSealed, Is.True, "The 'RandomExtensions' class must be static");
         }
 
-        [MonitoredTest("Balloon - Should not have been changed")]
+        [MonitoredTest]
         public void _02_Balloon_ShouldNotHaveBeenChanged()
         {
             string balloonContentHash = Solution.Current.GetFileHash(@"Exercise1\Balloon.cs");
             Assert.That(balloonContentHash, Is.EqualTo("EB-57-B7-FF-89-18-40-80-A6-BD-75-2B-C1-20-C2-54"));
         }
 
-        [MonitoredTest("RandomExtensions - NextBalloon - Should be defined correctly")]
+        [MonitoredTest]
         public void _03_NextBalloon_ShouldBeDefinedCorrectly()
         {
             AssertNextBalloonMethodIsDefinedCorrectly();
         }
 
-        [MonitoredTest("RandomExtensions - NextBalloon - Should return a Balloon with random size")]
+        [MonitoredTest]
         public void _04_NextBalloon_ShouldReturnBalloonWithRandomSize()
         {
             AssertNextBalloonMethodIsDefinedCorrectly();
@@ -81,7 +81,7 @@ namespace Exercise1.Tests
             }
         }
 
-        [MonitoredTest("RandomExtensions - NextBalloon - Generated size should be less than or equal to the maximum size")]
+        [MonitoredTest]
         public void _05_NextBalloon_GeneratedSizeShouldBeLessThanOrEqualToTheMaximumSize()
         {
             AssertNextBalloonMethodIsDefinedCorrectly();
@@ -97,7 +97,7 @@ namespace Exercise1.Tests
             }
         }
 
-        [MonitoredTest("RandomExtensions - Should return a Balloon with a random color")]
+        [MonitoredTest]
         public void _06_NextBalloon_ShouldReturnBalloonWithRandomColor()
         {
             AssertNextBalloonMethodIsDefinedCorrectly();
@@ -128,13 +128,13 @@ namespace Exercise1.Tests
             }
         }
 
-        [MonitoredTest("RandomExtensions - NextBalloonFromArray - Should be defined correctly")]
+        [MonitoredTest]
         public void _07_NextBalloonFromArray_ShouldBeDefinedCorrectly()
         {
             AssertNextBalloonFromArrayMethodIsDefinedCorrectly();
         }
 
-        [MonitoredTest("RandomExtensions - NextBalloonFromArray - Should return a random item from the Balloon array")]
+        [MonitoredTest]
         public void _08_NextBalloonFromArray_ShouldReturnRandomItemFromBalloonArray()
         {
             AssertNextBalloonFromArrayMethodIsDefinedCorrectly();

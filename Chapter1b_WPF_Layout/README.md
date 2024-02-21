@@ -1,4 +1,4 @@
-# Exercises - Chapter 1b - WPF Layout
+# Exercises - Chapter 2 - WPF Layout
 
 ## Exercise 1
 Use XAML to create a window that looks as much as possible like this (for different window sizes):
@@ -138,5 +138,4 @@ When you click the WrapPanel Button (on the Mainwindow), a window that looks lik
  Position the buttons on the right position inside the DockPanel. All margins of the buttons should be 5. 
  The buttons have a height of 30 pixels and a width of 80 pixels.
  
-
  

@@ -36,21 +36,21 @@ namespace Exercise5.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("DockPanel - The Window should contain a DockPanel")]
+        [MonitoredTest]
         public void _01_TheWindowShouldContainADockPanel()
         {
             Assert.That(_dockPanel, Is.Not.Null, "Window should contain a DockPanel");
             Assert.That(_dockPanel.Parent, Is.SameAs(_window.Window), "The parent element of the DockPanel is the Window");
         }
 
-        [MonitoredTest("DockPanel - Should contain 4 Buttons And an Image")]
+        [MonitoredTest]
         public void _02_TheDockPanelShouldContain4ButtonsAndAnImage()
         {
             Assert.That(_buttons.Count, Is.EqualTo(4), "The DockPanel should contain 4 buttons");
             Assert.That(_image.Parent, Is.SameAs(_dockPanel), "The parent element of the Image is the DockPanel");
         }
 
-        [MonitoredTest("DockPanel - The Buttons should have correct margins ans dimensions")]
+        [MonitoredTest]
         public void _03_TheButtonsShouldHaveCorrectMarginsAndDimensions()
         {
             Assert.That(_buttons.Count, Is.GreaterThan(0), "The DockPanel does not contain any buttons");
@@ -62,7 +62,7 @@ namespace Exercise5.Tests
             Assert.That(_buttons.All(b => b.Margin.Bottom == 5), Is.True, "All buttons should have a Bottom Margin of 5");
         }
 
-        [MonitoredTest("DockPanel - All Buttons should have a the correct DockPanel.Dock Value")]
+        [MonitoredTest]
         public void _04_AllButtonsShouldHaveTheCorrectDockPanelDock()
         {
             Assert.That(_topButton.GetValue(DockPanel.DockProperty), Is.EqualTo(Dock.Top), "The Top Button should have a 'Top' DockPanal.Dock Value");

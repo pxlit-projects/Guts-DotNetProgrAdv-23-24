@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:Exercise5"
         mc:Ignorable="d"
         Title="DockPanelWindow" Height="450" Width="800">
-    
+   
 </Window>

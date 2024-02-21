@@ -32,7 +32,7 @@ namespace Exercise4.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest]
         public void _01_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise4\MainWindow.xaml.cs";
@@ -44,13 +44,13 @@ namespace Exercise4.Tests
         }
 
 
-        [MonitoredTest("Grid should have 5 columns")]
+        [MonitoredTest]
         public void _02_GridShouldHaveFiveColumns()
         {
             Assert.That(_grid.ColumnDefinitions.Count, Is.EqualTo(5), "There have to be 5 columns (3 labels and 2 grid splitters).");
         }
 
-        [MonitoredTest("Should have 3 labels with the correct color")]
+        [MonitoredTest]
         public void _03_ShouldHaveThreeLabelsWithTheCorrectColor()
         {
             Assert.That(_labels.Count, Is.EqualTo(3), () => "The grid must contain 3 labels");
@@ -60,7 +60,7 @@ namespace Exercise4.Tests
             Assert.That(_labels[2].Background == Brushes.Red, Is.True, "The third label should be red");
         }
 
-        [MonitoredTest("Labels should be in the correct grid column")]
+        [MonitoredTest]
         public void _04_ShouldHaveLabelsInTheCorrectGridColumn()
         {
             Assert.That(_labels.Count, Is.EqualTo(3), () => "The grid must contain 3 labels");
@@ -69,7 +69,7 @@ namespace Exercise4.Tests
             Assert.That(_labels[2].GetValue(Grid.ColumnProperty), Is.EqualTo(4), () => "The third label should be in the last column");
         }
 
-        [MonitoredTest("There have to be 2 GridSplitters on the left and the right of the middle column")]
+        [MonitoredTest]
         public void _05_ShouldHaveTwoGridSplittersLeftAndRightOfTheMiddleColumn()
         {
             Assert.That(_gridSplitters.Count, Is.EqualTo(2), () => "There should be two GridSplitters.");
@@ -83,7 +83,7 @@ namespace Exercise4.Tests
                 () => "There should be one GridSplitter at the right of the middle column");
         }
 
-        [MonitoredTest("Should have horizontal and vertical alignment set correctly for the splitters")]
+        [MonitoredTest]
         public void _06_ShouldHaveHorizontalAndVerticalAlignmentSetCorrectlyForTheSplitters()
         {
             Assert.That(_gridSplitters.Count, Is.EqualTo(2), () => "There should be two GridSplitters.");
@@ -97,7 +97,7 @@ namespace Exercise4.Tests
                 "Not all splitters are vertically stretched");
         }
 
-        [MonitoredTest("Should have the window as the scope for size sharing")]
+        [MonitoredTest]
         public void _07_ShouldHaveTheWindowAsTheScopeForSizeSharing()
         {
             Assert.That(_window.Window.GetValue(Grid.IsSharedSizeScopeProperty), Is.True,
@@ -105,7 +105,7 @@ namespace Exercise4.Tests
                 "See https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.issharedsizescope");
         }
 
-        [MonitoredTest("The first and the last column have to share the same size group")]
+        [MonitoredTest]
         public void _08_ShouldHaveTheFirstAndTheLastColumnInTheSameSizeGroup()
         {
             _02_GridShouldHaveFiveColumns();
@@ -121,7 +121,7 @@ namespace Exercise4.Tests
                 "The first and the last column have to share the same Size Group.");
         }
 
-        [MonitoredTest("Should have auto width colums except for the middle column")]
+        [MonitoredTest]
         public void _09_ShouldHaveAutomWidthColumnsExceptForTheMiddleColumn()
         {
             _02_GridShouldHaveFiveColumns();

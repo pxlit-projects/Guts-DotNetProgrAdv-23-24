@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise1.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise01", @"Exercise1\BalloonProgram.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", @"Exercise1\BalloonProgram.cs")]
     public class BalloonProgramTests
     {
         private TypeInfo _writeDelegateTypeInfo;
@@ -78,19 +78,19 @@ namespace Exercise1.Tests
             }
         }
 
-        [MonitoredTest("BalloonProgram - There should be a WriteDelegate type defined")]
+        [MonitoredTest]
         public void _01_ThereShouldBeAWriteDelegateTypeDefined()
         {
             AssertWriteDelegateIsDefinedCorrectly();
         }
 
-        [MonitoredTest("BalloonProgram - Should have a constructor that accepts a WriteDelegate")]
+        [MonitoredTest]
         public void _02_ShouldHaveAConstructorThatAcceptsAWriteDelegate()
         {
             AssertConstructorIsDefinedCorrectly();
         }
 
-        [MonitoredTest("BalloonProgram - Run - Should create and write at least 5 random balloons")]
+        [MonitoredTest]
         public void _03_Run_ShouldCreateAndWriteAtLeast5RandomBalloons()
         {
             AssertProgramIsInstantiated();
@@ -100,7 +100,7 @@ namespace Exercise1.Tests
             Assert.That(_writeLogs, Has.Count.GreaterThanOrEqualTo(5), "Did not detect 5 or more writes.");
         }
 
-        [MonitoredTest("BalloonProgram - Run - Should use NextBalloon extension method")]
+        [MonitoredTest]
         public void _04_Run_ShouldUseNextBalloonExtensionMethod()
         {
             AssertProgramIsInstantiated();
@@ -109,7 +109,7 @@ namespace Exercise1.Tests
             Assert.That(CallsMemberMethod("NextBalloon"), Is.True, "Cannot find an invocation of the 'NextBalloon' method of a 'Random' instance.");
         }
 
-        [MonitoredTest("BalloonProgram - Run - Should use NextBalloonOfArray extension method")]
+        [MonitoredTest]
         public void _05_Run_ShouldUseNextBalloonOfArrayExtensionMethod()
         {
             AssertProgramIsInstantiated();
@@ -118,7 +118,7 @@ namespace Exercise1.Tests
             Assert.That(CallsMemberMethod("NextBalloonFromArray"), Is.True, "Cannot find an invocation of the 'NextBalloonFromArray' method of a 'Random' instance.");
         }
 
-        [MonitoredTest("BalloonProgram - Run - Should use the WriteDelegate to write about the popped balloon")]
+        [MonitoredTest]
         public void _06_Run_ShouldUseTheWriteDelegateToWriteAboutThePoppedBalloon()
         {
             AssertProgramIsInstantiated();
@@ -128,7 +128,7 @@ namespace Exercise1.Tests
             Assert.That(_writeLogs.Any(log => log.ToLower().Contains("popped")), Is.True, "Did not detect a write with the word 'popped'.");
         }
 
-        [MonitoredTest("BalloonProgram - Should use a readonly Random field")]
+        [MonitoredTest]
         public void _07_ShouldUseAReadOnlyRandomField()
         {
             FieldInfo randomFieldInfo = _balloonProgramTypeInfo
@@ -152,13 +152,13 @@ namespace Exercise1.Tests
         private void AssertConstructorIsDefinedCorrectly()
         {
             AssertWriteDelegateIsDefinedCorrectly();
-            Assert.IsNotNull(_constructorTypeInfo,
+            Assert.That(_constructorTypeInfo, Is.Not.Null,
                 "Cannot find a constructor that accepts an instance of the write delegate type");
         }
 
         private void AssertWriteDelegateIsDefinedCorrectly()
         {
-            Assert.IsNotNull(_writeDelegateTypeInfo,
+            Assert.That(_writeDelegateTypeInfo, Is.Not.Null,
                 "Cannot find a delegate type definition that supports methods that return void and accept a string parameter. " +
                 "Define the type in 'WriteDelegate.cs'.");
         }

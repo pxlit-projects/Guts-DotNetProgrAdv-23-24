@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\IntegerExtensions.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\IntegerExtensions.cs")]
     public class IntegerExtensionsTests
     {
         private TypeInfo _integerExtensionsTypeInfo;
@@ -23,20 +23,20 @@ namespace Exercise3.Tests
             _random = new Random();
         }
 
-        [MonitoredTest("There should be a static IntegerExtensions class")]
+        [MonitoredTest]
         public void _01_ShouldHaveAStaticIntegerExtensionsClass()
         {
             Assert.That(_integerExtensionsTypeInfo, Is.Not.Null, "Cannot find a type with the name 'IntegerExtensions'.");
             Assert.That(_integerExtensionsTypeInfo.IsAbstract && _integerExtensionsTypeInfo.IsSealed, Is.True, "The 'IntegerExtensions' class must be static");
         }
 
-        [MonitoredTest("IntegerExtensions - CircularIncrement - Should be defined correctly")]
+        [MonitoredTest]
         public void _02_CircularIncrement_ShouldBeDefinedCorrectly()
         {
             AssertCircularIncrementMethodIsDefinedCorrectly();
         }
 
-        [MonitoredTest("IntegerExtensions - CircularIncrement - Should return the next value within the range")]
+        [MonitoredTest]
         public void _03_CircularIncrement_ShouldReturnTheNextValueWithinTheRange()
         {
             AssertCircularIncrementMethodIsDefinedCorrectly();
@@ -52,7 +52,7 @@ namespace Exercise3.Tests
             }
         }
 
-        [MonitoredTest("IntegerExtensions - CircularIncrement - Should return the minimum value when next value is not within the range")]
+        [MonitoredTest]
         public void _04_CircularIncrement_ShouldReturnTheMinimumValueWhenNextValueIsNotWithinTheRange()
         {
             AssertCircularIncrementMethodIsDefinedCorrectly();

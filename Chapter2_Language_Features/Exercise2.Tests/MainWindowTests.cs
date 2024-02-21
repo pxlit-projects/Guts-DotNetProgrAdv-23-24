@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace Exercise2.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise02", @"Exercise2\MainWindow.xaml.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise02", @"Exercise2\MainWindow.xaml.cs")]
     [RequiresThread(ApartmentState.STA)]
     public class MainWindowTests
     {
@@ -65,7 +65,7 @@ namespace Exercise2.Tests
             _window?.Close();
         }
 
-        [MonitoredTest("MainWindow - Should have initialized readonly fields")]
+        [MonitoredTest]
         public void ShouldHaveInitializedReadOnlyFields()
         {
             var assembly = Assembly.GetAssembly(typeof(MainWindow));
@@ -90,7 +90,7 @@ namespace Exercise2.Tests
             Assert.That(calculationWorkerValue, Is.Not.Null, $"The field {workerFieldInfo.Name} should be initialized in the constructor.");
         }
 
-        [MonitoredTest("MainWindow - StartButton click when Cubic operation is checked - Should execute Cubic operation correctly")]
+        [MonitoredTest]
         public void StartButtonClick_CubicOperationChecked_ShouldExecuteCubicOperationCorrectly()
         {
             _inputTextBox.Text = "1 2 3";
@@ -118,7 +118,7 @@ namespace Exercise2.Tests
                 "The value 'calculationProgressBar' should be 1.0 after all events are processed.");
         }
 
-        [MonitoredTest("MainWindow - StartButton click when nth prime operation is checked - Should execute nth Prime operation correctly")]
+        [MonitoredTest]
         public void StartButtonClick_NthPrimeOperationChecked_ShouldExecuteNthPrimeOperationCorrectly()
         {
             _inputTextBox.Text = "1 2 3";
@@ -146,7 +146,7 @@ namespace Exercise2.Tests
                 "The value 'calculationProgressBar' should be 1.0 after all events are processed.");
         }
 
-        [MonitoredTest("MainWindow - StartButton click - Should reset progressbar and output when they have values from a previous click")]
+        [MonitoredTest]
         public void StartButtonClick_OutputAndProgressSetBecauseOfPreviousClick_ShouldResetProgressBarAndOutput()
         {
             _inputTextBox.Text = "";

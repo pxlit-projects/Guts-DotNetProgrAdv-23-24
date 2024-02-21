@@ -16,6 +16,7 @@ namespace Exercise5.Tests
         private StackPanel _stackPanel;
         private Button _apply_Button;
         private IList<TextBox> _textBoxes;
+        
         [OneTimeSetUp]
         public void Setup()
         {

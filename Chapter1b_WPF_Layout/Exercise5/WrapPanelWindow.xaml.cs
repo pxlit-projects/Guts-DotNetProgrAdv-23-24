@@ -23,6 +23,5 @@ namespace Exercise5
         {
             InitializeComponent();
         }
-        
     }
 }

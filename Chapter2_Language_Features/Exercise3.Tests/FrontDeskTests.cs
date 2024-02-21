@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\FrontDeskAggregate\FrontDesk.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\FrontDeskAggregate\FrontDesk.cs")]
     public class FrontDeskTests
     {
         private static readonly Random Random = new Random();
@@ -35,20 +35,20 @@ namespace Exercise3.Tests
         {
             _frontDesk = new FrontDesk();
         }
-        
-        [MonitoredTest("Order - Should have an OrderCreated event")]
+
+        [MonitoredTest]
         public void _01_ShouldHaveAnOrderCreatedEvent()
         {
             AssertHasOrderCreatedEvent();
         }
 
-        [MonitoredTest("Order - Should have a property of type ReadOnlyObservableCollection<IOrder> backed by an ObservableCollection field")]
+        [MonitoredTest]
         public void _02_ShouldHaveAPropertyOfTypeReadOnlyObservableCollectionOfIOrderBackedByAnObservableCollectionField()
         {
             AssertHasOrdersPropertyWithBackingField();
         }
 
-        [MonitoredTest("Order - Constructor - Should initialize Orders collection")]
+        [MonitoredTest]
         public void _03_Constructor_ShouldInitializeOrdersCollection()
         {
             AssertHasOrdersPropertyWithBackingField();
@@ -69,7 +69,7 @@ namespace Exercise3.Tests
                                                                   "(When an order is added to the backing field it should also be in the readonly collection.)");
         }
 
-        [MonitoredTest("Order - AddOrder - Should add an order to the orders collection and invoke the 'OrderCreated' event.")]
+        [MonitoredTest]
         public void _04_AddOrder_ShouldAddAnOrderToTheOrdersCollectionAndInvokeTheOrderCreatedEvent()
         {
             AssertHasOrdersPropertyWithBackingField();
@@ -95,7 +95,7 @@ namespace Exercise3.Tests
             Assert.That(eventRaised, Is.True, "The 'OrderCreated' event was not invoked.");
         }
 
-        [MonitoredTest("Order - RemoveCompletedOrders - Should remove orders that are completed")]
+        [MonitoredTest]
         public void _05_RemoveCompletedOrders_ShouldRemoveOrdersThatAreCompleted()
         {
             AssertHasOrdersPropertyWithBackingField();

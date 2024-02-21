@@ -102,7 +102,7 @@ namespace Exercise5.Tests
             Assert.That(_wrapPanel.Orientation, Is.EqualTo(Orientation.Vertical), "The Orientation of the WrapPanel has to become Vertical when clicking the Vertical RadioButton");
         }
 
-        [MonitoredTest("WrapPanel - The orientation of the WrapPanel has to be horizontal when clicking the Horizontal RadioButton ")]
+        [MonitoredTest("WrapPanel - The orientation of the WrapPanel has to be horizontal when clicking the Horizontal RadioButton "), Order(6)]
         public void _06_TheOrientationOfTheWrapPanelHasToBecomeHorizontalWhenClickingTheHorizontalRadioButton()
         {
             RadioButton horizontalRadioButton = _radioButtons.FirstOrDefault(r => r.Content.ToString() == "Horizontal");

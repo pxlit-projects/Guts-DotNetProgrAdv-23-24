@@ -34,7 +34,7 @@ namespace Exercise2.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest]
         public void _01_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise2\MainWindow.xaml.cs";
@@ -46,7 +46,7 @@ namespace Exercise2.Tests
                     "This exercise can be completed by purely working with XAML.");
         }
 
-        [MonitoredTest("All Buttons should have some margin")]
+        [MonitoredTest]
         public void _02_AllButtonsShouldHaveSomeMargin()
         {
             AssertHasOuterGrid();
@@ -58,7 +58,7 @@ namespace Exercise2.Tests
                 "E.g. 'Margin=\"4\"'");
         }
 
-        [MonitoredTest("All TextBlocks should have some margin and a background")]
+        [MonitoredTest]
         public void _03_AllTextBlocksShouldHaveSomeMarginAndABackground()
         {
             AssertHasOuterGrid();
@@ -74,7 +74,7 @@ namespace Exercise2.Tests
                 "All 'TextBlock' elements in the XAML should have a solid non-white background color. ");
         }
 
-        [MonitoredTest("None of the Buttons should be aligned to the left or the top")]
+        [MonitoredTest]
         public void _04_NoneOfTheButtonsShouldBeAlignedToTheLeftOrTheTop()
         {
             AssertHasOuterGrid();
@@ -89,7 +89,7 @@ namespace Exercise2.Tests
                 () => "There is at least one 'Button' that has 'VerticalAlignment' top.");
         }
 
-        [MonitoredTest("None of the TextBlocks should be aligned to the left or the top")]
+        [MonitoredTest]
         public void _05_NoneOfTheTextBlocksShouldBeAlignedToTheLeftOrTheTop()
         {
             AssertHasOuterGrid();
@@ -104,7 +104,7 @@ namespace Exercise2.Tests
                 () => "There is at least one 'TextBlock' that has 'VerticalAlignment' top.");
         }
 
-        [MonitoredTest("Should have a grid with 6 cells arranged correctly")]
+        [MonitoredTest]
         public void _06_ShouldHaveAGridWith6CellsArrangedCorrectly()
         {
             AssertGridHas6Cells();
@@ -130,7 +130,7 @@ namespace Exercise2.Tests
                 "The second column of the 'Grid' should take up the remaining space.");
         }
 
-        [MonitoredTest("The grid should have the correct element in each cell")]
+        [MonitoredTest]
         public void _07_TheGridShouldHaveTheCorrectElementInEachCell()
         {
             AssertGridHas6Cells();
@@ -144,7 +144,7 @@ namespace Exercise2.Tests
             AssertCellHasControl<DockPanel>(2, 1);
         }
 
-        [MonitoredTest("Should have a StackPanel of Buttons in the top right cell")]
+        [MonitoredTest]
         public void _08_ShouldHaveAStackPanelOfButtonsInTheTopRightCell()
         {
             AssertHasOuterGrid();
@@ -160,7 +160,7 @@ namespace Exercise2.Tests
                 "There should be at least 2 'Button' elements inside the 'StackPanel'.");
         }
 
-        [MonitoredTest("Should have a WrapPanel with multiple TextBlocks")]
+        [MonitoredTest]
         public void _09_ShouldHaveAWrapPanelWithMultipleTextBlocks()
         {
             AssertHasOuterGrid();
@@ -176,7 +176,7 @@ namespace Exercise2.Tests
                 "All the 'TextBlocks' should have a 'Text' of at least 10 characters.");
         }
 
-        [MonitoredTest("Should have a DockPanel with correctly docked TextBlocks")]
+        [MonitoredTest]
         public void _10_ShouldHaveADockPanelWithCorrectlyDockedTextBlocks()
         {
             AssertHasOuterGrid();

@@ -1,5 +1,5 @@
 ﻿namespace Exercise3
-{ 
+{
     public static class IntegerExtensions
     {
         //This class should contain an extension method 'CircularIncrement'. The method returns an integer incremented by 1.

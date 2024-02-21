@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace Exercise5.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H01b", "Exercise05", @"Exercise5\MainWindow.xaml")]
+    [ExerciseTestFixture("progAdvNet", "H03", "Exercise05", @"Exercise5\MainWindow.xaml")]
     [Apartment(ApartmentState.STA)]
     public class MainWindowTests
     {

@@ -34,7 +34,7 @@ namespace Exercise3.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest]
         public void _01_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise3\MainWindow.xaml.cs";
@@ -45,7 +45,7 @@ namespace Exercise3.Tests
                 "This exercise can be completed by purely working with XAML.");
         }
 
-        [MonitoredTest("Should have 2 ellipses in a Canvas")]
+        [MonitoredTest]
         public void _02_ShouldHaveTwoEllipsesInACanvas()
         {
             Assert.That(_canvas, Is.Not.Null, "Cannot find a 'Canvas' in the window.");
@@ -54,7 +54,7 @@ namespace Exercise3.Tests
             Assert.That(_ellipses.All(e => e.Parent == _canvas), Is.True, "The ellipses should be children of the 'Canvas'.");
         }
 
-        [MonitoredTest("Should have  rectangles in a Canvas")]
+        [MonitoredTest]
         public void _02_ShouldHaveSixRectanglesInACanvas()
         {
             Assert.That(_canvas, Is.Not.Null, "Cannot find a 'Canvas' in the window.");
@@ -63,7 +63,7 @@ namespace Exercise3.Tests
             Assert.That(_rectangles.All(e => e.Parent == _canvas), Is.True, "The rectangles should be children of the 'Canvas'.");
         }
 
-        [MonitoredTest("Should have 2 ellipses and 6 rectangles with the correct color and position")]
+        [MonitoredTest]
         public void _03_ShouldHave2EllipsesAnd6RectanglesWithTheCorrectColorAndPosition()
         {
             IList<Ellipse> redEllipses = _ellipses.Where(e => e.Fill == Brushes.Red).OrderBy(e => e.GetValue(Canvas.TopProperty)).ToList();

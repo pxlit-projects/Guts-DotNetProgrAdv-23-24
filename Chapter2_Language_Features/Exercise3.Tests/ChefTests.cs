@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\ChefAggregate\Chef.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\ChefAggregate\Chef.cs")]
     public class ChefTests
     {
         private static readonly Random Random = new Random();
@@ -27,7 +27,7 @@ namespace Exercise3.Tests
             _chef = new Chef(_frontDesk, _chefActionsMock.Object);
         }
 
-        [MonitoredTest("Chef - Should listen for created orders and add them in a queue")]
+        [MonitoredTest]
         public void ShouldListenForCreatedOrdersAndAddThemInAQueue()
         {
             Queue<IOrder> queue = GetAndAssertQueueFieldValue();
@@ -38,7 +38,7 @@ namespace Exercise3.Tests
                 "When the 'AddOrder' method of the 'Frontdesk' is invoked, the queue should contain exactly one order.");
         }
 
-        [MonitoredTest("Chef - StartProcessingOrders - Should process orders in the queue")]
+        [MonitoredTest]
         public void StartProcessingOrders_ShouldProcessOrdersInTheQueue()
         {
             Queue<IOrder> queue = GetAndAssertQueueFieldValue();

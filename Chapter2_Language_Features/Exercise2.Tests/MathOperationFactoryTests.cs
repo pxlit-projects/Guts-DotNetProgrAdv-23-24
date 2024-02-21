@@ -5,7 +5,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Exercise2.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise02", @"Exercise2\MathOperationFactory.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise02", @"Exercise2\MathOperationFactory.cs")]
     public class MathOperationFactoryTests
     {
         private MathOperationFactory _factory;
@@ -23,7 +23,7 @@ namespace Exercise2.Tests
             _factory = new MathOperationFactory();
         }
 
-        [MonitoredTest("MathOperationFactory - CreateCubicOperation - Should use a lambda expression")]
+        [MonitoredTest]
         public void CreateCubicOperation_ShouldUseALambdaExpression()
         {
             SyntaxNode body = GetMethodBody(nameof(MathOperationFactory.CreateCubicOperation));
@@ -31,7 +31,7 @@ namespace Exercise2.Tests
             Assert.That(lambdaSyntax, Is.Not.Null);
         }
 
-        [MonitoredTest("MathOperationFactory - CreateCubicOperation - Should return the correct function")]
+        [MonitoredTest]
         public void CreateCubicOperation_ShouldReturnTheCorrectFunction()
         {
             //Arrange
@@ -50,7 +50,7 @@ namespace Exercise2.Tests
             }
         }
 
-        [MonitoredTest("MathOperationFactory - CreateNthPrimeOperation - Should use a lambda expression")]
+        [MonitoredTest]
         public void CreateNthPrimeOperation_ShouldUseALambdaExpression()
         {
             SyntaxNode body = GetMethodBody(nameof(MathOperationFactory.CreateNthPrimeOperation));
@@ -58,7 +58,7 @@ namespace Exercise2.Tests
             Assert.That(lambdaSyntax, Is.Not.Null);
         }
 
-        [MonitoredTest("MathOperationFactory - CreateNthPrimeOperation - Should return the correct function")]
+        [MonitoredTest]
         public void CreateNthPrimeOperation_ShouldReturnTheCorrectFunction()
         {
             //Arrange

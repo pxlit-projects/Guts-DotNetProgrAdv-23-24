@@ -1,6 +1,6 @@
 ﻿namespace Exercise3.OrderAggregate
 {
-    public class OrderNumber 
-    { 
+    public struct OrderNumber
+    {
     }
 }

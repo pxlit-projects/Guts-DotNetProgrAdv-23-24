@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:Exercise5"
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
-        
+    <Grid>
+       
+    </Grid>
 </Window>

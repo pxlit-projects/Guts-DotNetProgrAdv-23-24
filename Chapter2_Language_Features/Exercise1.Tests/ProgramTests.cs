@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Exercise1.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise01", @"Exercise1\Program.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", @"Exercise1\Program.cs")]
     public class ProgramTests
     {
         private string _programClassContent;
@@ -26,7 +26,7 @@ namespace Exercise1.Tests
             Console.SetIn(consoleReader);
         }
 
-        [MonitoredTest("Program - Length of the code should be short")]
+        [MonitoredTest]
         public void _01_LengthOfTheCode_ShouldBeShort()
         {
             int maximumCharacterCount = 700;
@@ -34,7 +34,7 @@ namespace Exercise1.Tests
                 $"The main method is too long. It could be done in {maximumCharacterCount} or less.");
         }
 
-        [MonitoredTest("Program - Main - Should run BalloonProgram")]
+        [MonitoredTest]
         public void _02_Main_ShouldRunBalloonProgram()
         {
             string mainBody = GetMethodBodyWithoutComments(nameof(Program.Main));
@@ -42,7 +42,7 @@ namespace Exercise1.Tests
             Assert.That(mainBody, Contains.Substring(".Run();"), "The 'Run' method of the balloon program should be called.");
         }
 
-        [MonitoredTest("Program - Main - Should write to debug output and console")]
+        [MonitoredTest]
         public void _03_Main_ShouldWriteToDebugAndConsole()
         {
             //Listen to console

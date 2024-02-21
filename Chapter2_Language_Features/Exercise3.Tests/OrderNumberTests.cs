@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\OrderAggregate\OrderNumber.cs")]
+    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\OrderAggregate\OrderNumber.cs")]
     public class OrderNumberTests
     {
         private Type _type;
@@ -29,25 +29,25 @@ namespace Exercise3.Tests
             _createNextMethod = _type.GetRuntimeMethod("CreateNext", new Type[] { });
         }
 
-        [MonitoredTest("OrderNumber - Should be a value type")]
+        [MonitoredTest]
         public void _01_ShouldBeAValueType()
         {
             Assert.That(_type.IsValueType, Is.True);
         }
 
-        [MonitoredTest("OrderNumber - Should have a readonly 'Sequence' property")]
+        [MonitoredTest]
         public void _02_ShouldHaveAReadOnlySequenceProperty()
         {
             AssertHasSequenceProperty();
         }
 
-        [MonitoredTest("OrderNumber - Should have static 'CreateNext' factory method")]
+        [MonitoredTest]
         public void _03_ShouldHaveAStaticCreateNextFactoryMethod()
         {
             AssertHasCreateNextMethod();
         }
 
-        [MonitoredTest("OrderNumber - CreateNext - Should create a number with an incremented sequence")]
+        [MonitoredTest]
         public void _04_CreateNext_ShouldCreateANumberWithAnIncrementedSequence()
         {
             AssertHasSequenceProperty();
@@ -85,7 +85,7 @@ namespace Exercise3.Tests
             }
         }
 
-        [MonitoredTest("OrderNumber - ToString - Should put a hashtag before the sequence")]
+        [MonitoredTest]
         public void _05_ToString_ShouldPutAHashtagBeforeTheSequence()
         {
             AssertHasSequenceProperty();

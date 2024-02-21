@@ -22,6 +22,6 @@ namespace Exercise5
         public StackPanelWindow()
         {
             InitializeComponent();
-        }        
+        }      
     }
 }

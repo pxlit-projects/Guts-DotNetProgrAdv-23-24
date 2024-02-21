@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guts.Client.Core" Version="4.0.3" />
+    <PackageReference Include="Guts.Client.Core" Version="6.0.1" />
     <PackageReference Include="Guts.Client.WPF" Version="1.1.0" />
   </ItemGroup>
 

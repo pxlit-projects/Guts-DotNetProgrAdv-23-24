@@ -77,7 +77,7 @@ namespace Exercise5.Tests
             Assert.That(_radioButtons.All(r => r.Parent == _orientationStackPanel), Is.True, "All radioButtons have to be inside the StackPanel of the GroupBox");
         }
 
-        [MonitoredTest("StackPanel - The StackPanel should be in the first row of the grid ")]
+        [MonitoredTest("StackPanel - The StackPanel should be in the first row of the grid ")] //TODO: second row instead of first row
         public void _04_TheStackPanelShouldBeInTheSecondRowOfTheGrid()
         {
             Assert.That(_stackPanel, Is.Not.Null, "The should be a stackPanel within the Grid");
