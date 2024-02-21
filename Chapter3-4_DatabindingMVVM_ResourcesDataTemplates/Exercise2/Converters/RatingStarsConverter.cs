@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace Exercise2.Converters
 {
-    public class RatingStarsConverter
+    public class RatingStarsConverter 
     {
     }
 }

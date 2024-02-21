@@ -20,21 +20,21 @@ public class SideBarViewModelTests
         _viewModel = new SideBarViewModel(_movieRepositoryMock.Object) as ISideBarViewModel;
     }
 
-    [MonitoredTest("SideBarViewModel - Should implement ISideBarViewModel and inherit from ViewModelBase")]
+    [MonitoredTest]
     public void _01_ShouldImplementISideBarViewModelAndInheritFromViewModelBase()
     {
         Assert.That(_viewModel, Is.Not.Null, "ISideBarViewModel is not implemented");
         Assert.That(typeof(SideBarViewModel).IsAssignableTo(typeof(ViewModelBase)), "Does not inherit from ViewModelBase");
     }
 
-    [MonitoredTest("ISideBarViewModel interface should not have been changed")]
+    [MonitoredTest]
     public void _02_ISideBarViewModelInterfaceShouldNotHaveBeenChanged()
     {
         string hash = Solution.Current.GetFileHash(@"Exercise2\ViewModel\ISideBarViewModel.cs");
         Assert.That(hash, Is.EqualTo("25-DF-4F-48-6F-4E-D4-9A-D7-8C-95-F3-91-98-A4-70"));
     }
 
-    [MonitoredTest("SideBarViewModel - Constructor - Should make sure that Movies is not null")]
+    [MonitoredTest]
     public void _03_Constructor_ShouldMakeSureThatMoviesIsNotNull()
     {
         _01_ShouldImplementISideBarViewModelAndInheritFromViewModelBase();
@@ -42,7 +42,7 @@ public class SideBarViewModelTests
         Assert.That(_viewModel.Movies.Count, Is.Zero, "After construction (and before load) the Movies list should be empty");
     }
 
-    [MonitoredTest("SideBarViewModel - Load - Should retrieve all movies and set Movies property")]
+    [MonitoredTest]
     public void _04_Load_ShouldRetrieveAllMoviesAndSetMoviesProperty()
     {
         _01_ShouldImplementISideBarViewModelAndInheritFromViewModelBase();
@@ -76,7 +76,7 @@ public class SideBarViewModelTests
         Assert.That(moviesPropertyChanged, Is.True, "The Movies property should notify that it is changed");
     }
 
-    [MonitoredTest("SideBarViewModel - SelectedMovie - Should notify when it is changed")]
+    [MonitoredTest]
     public void _05_SelectedMovie_ShouldNotifyWhenItIsChanged()
     {
         _01_ShouldImplementISideBarViewModelAndInheritFromViewModelBase();

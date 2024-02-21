@@ -28,4 +28,5 @@
             <TextBlock Text="Please select a movie in the sidebar"></TextBlock>
         </Grid>
     </Grid>
+
 </UserControl>

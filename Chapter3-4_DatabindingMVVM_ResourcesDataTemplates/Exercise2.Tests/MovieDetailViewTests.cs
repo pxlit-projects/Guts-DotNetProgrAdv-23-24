@@ -36,14 +36,14 @@ public class MovieDetailViewTests
         });
     }
 
-    [MonitoredTest("MovieDetailView - ScrollViewer -  Should have a dark solid background")]
+    [MonitoredTest]
     public void _01_ScrollViewer_ShouldHaveADarkSolidBackground()
     {
         SolidColorBrush darkSolidBrush = _applicationTester.TryGetApplicationResource<SolidColorBrush>("DarkSolidBrush");
         Assert.That(_scrollViewer.Background, Is.SameAs(darkSolidBrush));
     }
 
-    [MonitoredTest("MovieDetailView - Title - Should be configured correctly")]
+    [MonitoredTest]
     public void _02_Title_ShouldBeConfiguredCorrectly()
     {
         TextBlock titleTextBlock = _detailGrid.Children.OfType<TextBlock>().First();
@@ -57,7 +57,7 @@ public class MovieDetailViewTests
         Assert.That(titleTextBlock.FontSize, Is.GreaterThan(15), "The font size of the title should be bigger");
     }
 
-    [MonitoredTest("MovieDetailView - Opening crawl - Should be configured correctly")]
+    [MonitoredTest]
     public void _03_OpeningCrawl_ShouldBeConfiguredCorrectly()
     {
         TextBlock crawlTextBlock = _detailGrid.Children.OfType<TextBlock>().ElementAt(1);
@@ -71,7 +71,7 @@ public class MovieDetailViewTests
         Assert.That(crawlTextBlock.FontStyle, Is.EqualTo(FontStyles.Italic), "The opening crawl should be italic");
     }
 
-    [MonitoredTest("MovieDetailView - Rating - Should be configured correctly")]
+    [MonitoredTest]
     public void _04_Rating_ShouldBeConfiguredCorrectly()
     {
         StackPanel ratingStackPanel = _detailGrid.Children.OfType<StackPanel>().First();
@@ -96,7 +96,7 @@ public class MovieDetailViewTests
         BindingUtil.AssertBinding(ratingButton, ButtonBase.CommandProperty, "GiveFiveStarRatingCommand", BindingMode.OneWay);
     }
 
-    [MonitoredTest("MovieDetailView - No movie selected - Should show 'No movie' Grid on top")]
+    [MonitoredTest]
     public void _05_NoMovieSelected_ShouldShowNoMovieGridOnTop()
     {
         SolidColorBrush darkSolidBrush = _applicationTester.TryGetApplicationResource<SolidColorBrush>("DarkSolidBrush");

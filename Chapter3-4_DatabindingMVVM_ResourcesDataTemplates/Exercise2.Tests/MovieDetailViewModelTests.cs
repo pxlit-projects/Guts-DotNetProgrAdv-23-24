@@ -15,21 +15,21 @@ public class MovieDetailViewModelTests
         _viewModel = new MovieDetailViewModel() as IMovieDetailViewModel;
     }
 
-    [MonitoredTest("MovieDetailViewModel - Should implement IMovieDetailViewModel and inherit from ViewModelBase")]
+    [MonitoredTest]
     public void _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase()
     {
         Assert.That(_viewModel, Is.Not.Null, "IMovieDetailViewModel is not implemented");
         Assert.That(typeof(MovieDetailViewModel).IsAssignableTo(typeof(ViewModelBase)), "Does not inherit from ViewModelBase");
     }
 
-    [MonitoredTest("IMovieDetailViewModel interface should not have been changed")]
+    [MonitoredTest]
     public void _02_IMovieDetailViewModelInterfaceShouldNotHaveBeenChanged()
     {
         string hash = Solution.Current.GetFileHash(@"Exercise2\ViewModel\IMovieDetailViewModel.cs");
         Assert.That(hash, Is.EqualTo("4C-B0-AD-9E-E8-F0-46-BE-02-97-17-E8-7F-3C-2C-BC"));
     }
 
-    [MonitoredTest("MovieDetailViewModel - Movie - Should notify when it is changed")]
+    [MonitoredTest]
     public void _03_Movie_ShouldNotifyWhenItIsChanged()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
@@ -51,7 +51,8 @@ public class MovieDetailViewModelTests
         Assert.That(moviePropertyChanged, Is.True);
     }
 
-    [MonitoredTest("MovieDetailViewModel - Movie - Should notify that HasNoMovie could have changed")]    public void _04_Movie_ShouldNotifyThatHasNoMovieCouldHaveChanged()
+    [MonitoredTest]
+    public void _04_Movie_ShouldNotifyThatHasNoMovieCouldHaveChanged()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
 
@@ -72,7 +73,7 @@ public class MovieDetailViewModelTests
         Assert.That(hasNoMoviePropertyChanged, Is.True);
     }
 
-    [MonitoredTest("MovieDetailViewModel - HasNoMovie - Should return true when no Movie is set")]
+    [MonitoredTest]
     public void _05_HasNoMovieShouldReturnTrueWhenNoMovieIsSet()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
@@ -82,7 +83,7 @@ public class MovieDetailViewModelTests
         Assert.That(_viewModel.HasNoMovie, Is.False);
     }
 
-    [MonitoredTest("MovieDetailViewModel - GiveFiveStarRatingCommand - Execute - Should set rating of Movie to 5")]
+    [MonitoredTest]
     public void _06_GiveFiveStarRatingCommand_Execute_ShouldSetRatingOfMovieTo5()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
@@ -96,7 +97,7 @@ public class MovieDetailViewModelTests
         Assert.That(_viewModel.Movie.Rating, Is.EqualTo(5));
     }
 
-    [MonitoredTest("MovieDetailViewModel - GiveFiveStarRatingCommand - CanExecute - Should only be true if a Movie is set and the rating of that movie is not 5")]
+    [MonitoredTest]
     public void _07_GiveFiveStarRatingCommand_CanExecute_ShouldOnlyBeTrueIfAMovieIsSetAndTheRatingOfThatMovieIsNot5()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
@@ -110,7 +111,7 @@ public class MovieDetailViewModelTests
         Assert.That(_viewModel.GiveFiveStarRatingCommand.CanExecute(null), Is.False);
     }
 
-    [MonitoredTest("MovieDetailViewModel - GiveFiveStarRatingCommand - CanExecuteChanged - Should be raised when the movie changes")]
+    [MonitoredTest]
     public void _08_GiveFiveStarRatingCommand_CanExecuteChanged_ShouldBeRaisedWhenTheMovieChanges()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();
@@ -131,7 +132,7 @@ public class MovieDetailViewModelTests
         Assert.That(wasRaised, Is.True);
     }
 
-    [MonitoredTest("MovieDetailViewModel - GiveFiveStarRatingCommand - CanExecuteChanged - Should be raised when the rating of the movie changes")]
+    [MonitoredTest]
     public void _09_GiveFiveStarRatingCommand_CanExecuteChanged_ShouldBeRaisedWhenTheRatingOfTheMovieChanges()
     {
         _01_ShouldImplementIMovieDetailViewModelAndInheritFromViewModelBase();

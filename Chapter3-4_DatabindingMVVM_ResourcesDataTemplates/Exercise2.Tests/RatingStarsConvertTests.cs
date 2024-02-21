@@ -15,13 +15,13 @@ public class RatingStarsConverterTests
         _converter = new RatingStarsConverter() as IValueConverter;
     }
 
-    [MonitoredTest("RatingStarsConverter - Should be a converter that can be used in bindings")]
+    [MonitoredTest]
     public void _01_ShouldBeAConverterThatCanBeUsedInBindings()
     {
         Assert.That(_converter, Is.Not.Null, "Not a valid converter");
     }
 
-    [MonitoredTest("RatingStarsConverter - Convert - Should convert ratings correctly")]
+    [MonitoredTest]
     [TestCase(1, "*")]
     [TestCase(3, "***")]
     [TestCase(5, "*****")]

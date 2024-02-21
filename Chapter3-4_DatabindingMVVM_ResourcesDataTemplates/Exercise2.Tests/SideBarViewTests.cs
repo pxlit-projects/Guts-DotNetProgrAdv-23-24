@@ -34,14 +34,14 @@ public class SideBarViewTests
         });
     }
 
-    [MonitoredTest("SideBarView - Should have a dark radial background")]
+    [MonitoredTest]
     public void _01_ShouldHaveADarkRadialBackground()
     {
         RadialGradientBrush darkRadialGradientBrush = _applicationTester.TryGetApplicationResource<RadialGradientBrush>("DarkRadialBrush");
         Assert.That(_grid.Background, Is.SameAs(darkRadialGradientBrush));
     }
 
-    [MonitoredTest("SideBarView - ListView - Should be configured correctly")]
+    [MonitoredTest]
     public void _02_ListView_ShouldBeConfiguredCorrectly()
     {
         SolidColorBrush? background = _listView.Background as SolidColorBrush;
@@ -52,7 +52,7 @@ public class SideBarViewTests
         BindingUtil.AssertBinding(_listView, Selector.SelectedItemProperty, "SelectedMovie", BindingMode.TwoWay);
     }
 
-    [MonitoredTest("SideBarView - ListView ItemTemplate - Should be configured correctly")]
+    [MonitoredTest]
     public void _03_ListView_ItemTemplate_ShouldBeConfiguredCorrectly()
     {
         DataTemplate? dataTemplate = _listView.ItemTemplate;

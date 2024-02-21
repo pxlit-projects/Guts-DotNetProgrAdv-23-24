@@ -1,14 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace Exercise1
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
+
         private IList<Movie> GetDummyMovies()
         {
             var movies = new List<Movie>

@@ -1,4 +1,6 @@
-﻿using Exercise2.Data;
+﻿using System.Collections.Generic;
+using Exercise2.Data;
+using Exercise2.Model;
 
 namespace Exercise2.ViewModel;
 

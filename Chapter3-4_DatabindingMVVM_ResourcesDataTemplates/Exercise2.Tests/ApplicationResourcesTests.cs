@@ -9,7 +9,7 @@ namespace Exercise2.Tests;
     @"Exercise2\App.xaml;Exercise2\Resources\Brushes.xaml;Exercise2\Resources\Converters.xaml;")]
 public class ApplicationResourcesTests
 {
-    private ApplicationTester _applicationTester;
+    private ApplicationTester _applicationTester = null!;
 
     [OneTimeSetUp]
     public void BeforeAllTests()
@@ -18,7 +18,7 @@ public class ApplicationResourcesTests
         _applicationTester.LoadApplication();
     }
 
-    [MonitoredTest("Application Resources - Should have a DarkRadialBrush")]
+    [MonitoredTest]
     public void _01_ShouldHaveADarkRadialBrush()
     {
         RadialGradientBrush darkRadialGradientBrush = _applicationTester.TryGetApplicationResource<RadialGradientBrush>("DarkRadialBrush");
@@ -27,7 +27,7 @@ public class ApplicationResourcesTests
         Assert.That(darkRadialGradientBrush.GradientStops[0].Color != darkRadialGradientBrush.GradientStops[1].Color, Is.True, "The brush should use 2 different colors");
     }
 
-    [MonitoredTest("Application Resources - Should have a DarkSolidBrush")]
+    [MonitoredTest]
     public void _02_ShouldHaveADarkSolidBrush()
     {
         SolidColorBrush darkSolidBrush = _applicationTester.TryGetApplicationResource<SolidColorBrush>("DarkSolidBrush");
@@ -35,7 +35,7 @@ public class ApplicationResourcesTests
             Is.True, "The color of the DarkSolidBrush should be darker");
     }
 
-    [MonitoredTest("Application Resources - Should have a FontBrush")]
+    [MonitoredTest]
     public void _03_ShouldHaveAFontBrush()
     {
         SolidColorBrush fontBrush = _applicationTester.TryGetApplicationResource<SolidColorBrush>("FontBrush");
@@ -43,13 +43,13 @@ public class ApplicationResourcesTests
             Is.True, "The color of the FontBrush should be lighter");
     }
 
-    [MonitoredTest("Application Resources - Should have a RatingStarsConverter")]
+    [MonitoredTest]
     public void _04_ShouldHaveARatingStarsConverter()
     {
         _applicationTester.TryGetApplicationResource<RatingStarsConverter>("RatingStarsConverter");
     }
 
-    [MonitoredTest("Application Resources - Should have a BooleanToVisibilityConverter")]
+    [MonitoredTest]
     public void _05_ShouldHaveABooleanToVisibilityConverter()
     {
         _applicationTester.TryGetApplicationResource<BooleanToVisibilityConverter>("BooleanToVisibilityConverter");

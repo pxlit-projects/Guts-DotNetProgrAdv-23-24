@@ -54,7 +54,7 @@ namespace Exercise1.Tests
             _window.Close();
         }
 
-        [MonitoredTest("Should not have changed Movie.cs")]
+        [MonitoredTest, Order(1)]
         public void _01_ShouldNotHaveChangedMovieClass()
         {
             var hash = Solution.Current.GetFileHash(@"Exercise1\Movie.cs");
@@ -62,7 +62,7 @@ namespace Exercise1.Tests
             Assert.That(hash, Is.EqualTo("08-67-98-5C-EC-F3-AD-F8-F9-EF-DC-33-33-41-FF-5D"));
         }
 
-        [MonitoredTest("The ListView source of data should be a collection that notifies of changes")]
+        [MonitoredTest, Order(2)]
         public void _02_ListView_SourceOfData_ShouldBeACollectionThatNotifiesOfChanges()
         {
             AssertHasListView();
@@ -80,7 +80,7 @@ namespace Exercise1.Tests
                 "The source of data should contain at least 2 instances of 'Movie'.");
         }
 
-        [MonitoredTest("The ListView should have 3 columns")]
+        [MonitoredTest, Order(3)]
         public void _03_ListView_ShouldHave3Columns()
         {
             GridViewColumnCollection columns = AssertAndGetListViewColumns();
@@ -97,7 +97,7 @@ namespace Exercise1.Tests
                 columnHeaderErrorMessage);
         }
 
-        [MonitoredTest("The ListView columns should have correct bindings defined")]
+        [MonitoredTest, Order(4)]
         public void _04_ListView_Columns_ShouldHaveCorrectBindings()
         {
             GridViewColumnCollection columns = AssertAndGetListViewColumns();
@@ -112,7 +112,7 @@ namespace Exercise1.Tests
             AssertDisplayMemberBinding(releaseYearColumn, "ReleaseYear");
         }
 
-        [MonitoredTest("The movie form should have correct bindings")]
+        [MonitoredTest, Order(5)]
         public void _05_MovieForm_ShouldHaveCorrectBindings()
         {
             AssertHasFormControls();
@@ -122,7 +122,7 @@ namespace Exercise1.Tests
             BindingUtil.AssertBinding(_releaseYearTextBox, TextBox.TextProperty, "ReleaseYear", BindingMode.TwoWay);
         }
 
-        [MonitoredTest("The movie form should be bound to an unknown movie")]
+        [MonitoredTest, Order(6)]
         public void _06_MovieForm_ShouldBeBoundToAnUnknownMovie()
         {
             AssertHasFormControls();
@@ -137,7 +137,7 @@ namespace Exercise1.Tests
             Assert.That(movie.ReleaseYear, Is.EqualTo(emptyMovie.ReleaseYear), mustBeUnknownMovieMessage);
         }
 
-        [MonitoredTest("Add movie should show an error message for an invalid movie")]
+        [MonitoredTest, Order(7)]
         public void _07_MovieForm_AddMovie_ShouldShowErrorMessageForInvalidMovie()
         {
             bool movieWasAdded = TryAddMovie("Unknown", Guid.NewGuid().ToString(), 1980, out _);
@@ -156,7 +156,7 @@ namespace Exercise1.Tests
                 "No error message is shown when adding a movie with release year 0.");
         }
 
-        [MonitoredTest("Add movie should add a valid movie to the movies collection")]
+        [MonitoredTest, Order(8)]
         public void _08_MovieForm_AddMovie_ShouldAddValidMovieToTheMoviesCollection()
         {
             AssertHasFormControls();
@@ -176,7 +176,7 @@ namespace Exercise1.Tests
             Assert.That(addedMovie.ReleaseYear, Is.EqualTo(movieToAdd.ReleaseYear), failMessage);
         }
 
-        [MonitoredTest("The movie form should be bound to a new unknown movie after adding one")]
+        [MonitoredTest, Order(9)]
         public void _09_MovieForm_ShouldBeBoundToANewUnknownMovieAfterAddingOne()
         {
             var movieToAdd = new Movie
@@ -198,7 +198,7 @@ namespace Exercise1.Tests
             Assert.That(nextNewMovie.ReleaseYear, Is.Zero, failMessage);
         }
 
-        [MonitoredTest("The movie form should clear previous error message after adding a movie")]
+        [MonitoredTest, Order(10)]
         public void _10_MovieForm_ShouldClearPreviousErrorMessageAfterAddingAMovie()
         {
             AssertHasFormControls();
@@ -209,7 +209,7 @@ namespace Exercise1.Tests
                 "Previous error messages are not cleared when the add operation succeeds.");
         }
 
-        [MonitoredTest("The movie form labels should have correct targets")]
+        [MonitoredTest, Order(11)]
         public void _11_MovieForm_LabelsShouldHaveCorrectTargets()
         {
             AssertHasFormControls();

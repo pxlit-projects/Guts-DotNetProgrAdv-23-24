@@ -29,14 +29,14 @@ public class HeaderControlTests
         });
     }
 
-    [MonitoredTest("Header - Should have a dark radial background")]
+    [MonitoredTest]
     public void _01_ShouldHaveADarkRadialBackground()
     {
         RadialGradientBrush darkRadialGradientBrush = _applicationTester.TryGetApplicationResource<RadialGradientBrush>("DarkRadialBrush");
         Assert.That(_grid.Background, Is.SameAs(darkRadialGradientBrush));
     }
 
-    [MonitoredTest("Header - Title - Should use the FontBrush in the application resources for the font color")]
+    [MonitoredTest]
     public void _02_Title_ShouldUseTheFontBrushInTheApplicationResourcesForTheFontColor()
     {
         var fontBrush = _applicationTester.TryGetApplicationResource<SolidColorBrush>("FontBrush");

@@ -23,21 +23,21 @@ public class MainViewModelTests
         _viewModel = new MainViewModel(_sideBarViewModelMock.Object, _movieDetailViewModelMock.Object) as IMainViewModel;
     }
 
-    [MonitoredTest("MainViewModel - Should implement IMainViewModel and inherit from ViewModelBase")]
+    [MonitoredTest]
     public void _01_ShouldImplementIMainViewModelAndInheritFromViewModelBase()
     {
         Assert.That(_viewModel, Is.Not.Null, "IMainViewModel is not implemented");
         Assert.That(typeof(MainViewModel).IsAssignableTo(typeof(ViewModelBase)), "Does not inherit from ViewModelBase");
     }
 
-    [MonitoredTest("IMainViewModel interface should not have been changed")]
+    [MonitoredTest]
     public void _02_IMainViewModelInterfaceShouldNotHaveBeenChanged()
     {
         string hash = Solution.Current.GetFileHash(@"Exercise2\ViewModel\IMainViewModel.cs");
         Assert.That(hash, Is.EqualTo("13-09-F1-FE-B5-22-47-07-2F-D2-12-03-5E-A2-FE-3D"));
     }
 
-    [MonitoredTest("MainViewModel - Constructor - Should set sidebar and movie detail view models")]
+    [MonitoredTest]
     public void _03_Constructor_ShouldSetSideBarAndMovieDetailViewModels()
     {
         _01_ShouldImplementIMainViewModelAndInheritFromViewModelBase();
@@ -45,7 +45,7 @@ public class MainViewModelTests
         Assert.That(_viewModel.MovieDetailViewModel, Is.SameAs(_movieDetailViewModelMock.Object));
     }
 
-    [MonitoredTest("MainViewModel - Load - Should load side bar")]
+    [MonitoredTest]
     public void _04_Load_ShouldLoadSideBar()
     {
         _01_ShouldImplementIMainViewModelAndInheritFromViewModelBase();
@@ -53,7 +53,7 @@ public class MainViewModelTests
         _sideBarViewModelMock.Verify(vm => vm.Load(), Times.Once());
     }
 
-    [MonitoredTest("MainViewModel - SelectedMovie property of SideBar changed - Should change Movie property of MovieDetail")]
+    [MonitoredTest]
     public void _05_SelectedMoviePropertyOfSideBarChanged_ShouldChangeMoviePropertyOfMovieDetail()
     {
         _01_ShouldImplementIMainViewModelAndInheritFromViewModelBase();
