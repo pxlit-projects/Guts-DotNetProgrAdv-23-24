@@ -5,7 +5,7 @@ using Moq;
 
 namespace Exercise2.Tests;
 
-[ExerciseTestFixture("doprogAdvNettnet2", "H03-04", "Exercise02",
+[ExerciseTestFixture("progAdvNet", "H03-04", "Exercise02", 
     @"Exercise2\ViewModel\IMainViewModel.cs;Exercise2\ViewModel\MainViewModel.cs;Exercise2\ViewModel\IViewModel.cs;Exercise2\ViewModel\ViewModelBase.cs;")]
 public class MainViewModelTests
 {

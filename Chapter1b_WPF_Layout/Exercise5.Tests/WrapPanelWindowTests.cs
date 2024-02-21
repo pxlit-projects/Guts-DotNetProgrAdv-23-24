@@ -36,7 +36,7 @@ namespace Exercise5.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("WrapPanel - Window should contain a Grid with 2 rows")]
+        [MonitoredTest]
         public void _01_WindowShouldContainAGridWith2Rows()
         {
             AssertGridHas2Cells();
@@ -59,7 +59,7 @@ namespace Exercise5.Tests
                 "The 'Grid' should be the child control of the 'Window'.");
         }
 
-        [MonitoredTest("WrapPanel - First Row of Grid should contain a GroupBox")]
+        [MonitoredTest]
         public void _02_FirstRowOfGridShouldContainAGroupBox()
         {
             AssertGridHasGroupBoxInHisFirstRow();
@@ -73,7 +73,7 @@ namespace Exercise5.Tests
         }
 
 
-        [MonitoredTest("WrapPanel - The GroupBox contains a StackPanel with 2 radiobuttons")]
+        [MonitoredTest]
         public void _03_GroupBoxShouldContainAStackPanelWith2RadioButtons()
         {
             Assert.That(_stackPanel, Is.Not.Null, "There has to be a stackPanel on the window");
@@ -82,7 +82,7 @@ namespace Exercise5.Tests
             Assert.That(_radioButtons.All(r => r.Parent == _stackPanel), Is.True, "All radioButtons have to be inside the GroupBox");
         }
 
-        [MonitoredTest("WrapPanel - The WrapPanel has to be in the second row of the Grid")]
+        [MonitoredTest]
         public void _04_HorizontalWrapPanelHasToBeInTheSecondRowOfTheGridAndContains8Ellipses()
         {
             Assert.That(_wrapPanel, Is.Not.Null, "There has to be a wrapPanel on the window");
@@ -93,7 +93,7 @@ namespace Exercise5.Tests
             Assert.That(_ellipses.Count, Is.EqualTo(8), "There have to be 8 ellipses within the WrapPanel");
         }
 
-        [MonitoredTest("WrapPanel - The orientation of the WrapPanel has to be vertical when clicking the Vertical RadioButton ")]
+        [MonitoredTest]
         public void _05_TheOrientationOfTheWrapPanelHasToBecomeVerticalWhenClickingTheVerticalRadioButton()
         {
             RadioButton verticalRadioButton = _radioButtons.FirstOrDefault(r => r.Content.ToString() == "Vertical");
@@ -102,7 +102,7 @@ namespace Exercise5.Tests
             Assert.That(_wrapPanel.Orientation, Is.EqualTo(Orientation.Vertical), "The Orientation of the WrapPanel has to become Vertical when clicking the Vertical RadioButton");
         }
 
-        [MonitoredTest("WrapPanel - The orientation of the WrapPanel has to be horizontal when clicking the Horizontal RadioButton "), Order(6)]
+        [MonitoredTest]
         public void _06_TheOrientationOfTheWrapPanelHasToBecomeHorizontalWhenClickingTheHorizontalRadioButton()
         {
             RadioButton horizontalRadioButton = _radioButtons.FirstOrDefault(r => r.Content.ToString() == "Horizontal");

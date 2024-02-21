@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace Exercise5.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H03", "Exercise05", @"Exercise5\MainWindow.xaml")]
+    [ExerciseTestFixture("progAdvNet", "H01b", "Exercise05", @"Exercise5\MainWindow.xaml")]
     [Apartment(ApartmentState.STA)]
     public class MainWindowTests
     {
@@ -48,14 +48,14 @@ namespace Exercise5.Tests
             return false;
         }
 
-        [MonitoredTest("MainWindow - Buttons should have Click event handlers")]
+        [MonitoredTest]
         public void _01_ButtonsShouldHaveClickEventHandlers()
         {
             Assert.That(_allButtons.Count, Is.EqualTo(4), "There should be 4 buttons");
             Assert.That(_allButtons.All(button => VerifyClickEventHandler(button, "Click")), Is.True, "All buttons should have a click event handler.");
         }
 
-        [MonitoredTest("MainWindow - Should have a grid with 4 cells containing a Button")]
+        [MonitoredTest]
         public void _02_ShouldHaveAGridWith4CellsContainingAButton()
         {
             AssertGridHas4Cells();
@@ -68,7 +68,7 @@ namespace Exercise5.Tests
 
         }
 
-        [MonitoredTest("MainWindow - The grid should have the correct element in each cell")]
+        [MonitoredTest]
         public void _03_TheGridShouldHaveTheCorrectElementInEachCell()
         {
             AssertGridHas4Cells();

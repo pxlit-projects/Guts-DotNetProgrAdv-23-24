@@ -7,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H01a", "Exercise3", @"Exercise3\MainWindow.xaml")]
+    [ExerciseTestFixture("progAdvNet", "H01a", "Exercise03", @"Exercise3\MainWindow.xaml")]
     [Apartment(ApartmentState.STA)]
     public class MainWindowTests
     {

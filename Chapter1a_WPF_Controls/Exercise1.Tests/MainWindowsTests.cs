@@ -10,7 +10,7 @@ using System.Windows.Threading;
 
 namespace Exercise1.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H01a", "Exercise1", @"Exercise1\MainWindow.xaml")]
+    [ExerciseTestFixture("progAdvNet", "H01a", "Exercise01", @"Exercise1\MainWindow.xaml")]
     [Apartment(ApartmentState.STA)]
 
     public class MainWindowTests

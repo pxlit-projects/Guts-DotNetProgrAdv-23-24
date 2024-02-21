@@ -34,19 +34,19 @@ namespace Exercise5.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Grid - Should have 3 rows")]
+        [MonitoredTest]
         public void _01_GridShouldHave3Rows()
         {
             AssertGridHas3Cells();
         }
 
-        [MonitoredTest("Grid - First Row should contain a StackPanel")]
+        [MonitoredTest]
         public void _02_FirstRowOfGridShouldContainAStackPanel()
         {
             AssertGridHasHorizontalStackPanelInHisFirstRow();
         }
 
-        [MonitoredTest("Grid - The StackPanel in the first row should contain 2 TextBoxes, 2 TextBlocks and a Button")]
+        [MonitoredTest]
         public void _03_StackPanelShouldContain5Controls()
         {
             UIElementCollection stackPanelChildren = _stackPanel.Children;
@@ -58,20 +58,20 @@ namespace Exercise5.Tests
 
         }
 
-        [MonitoredTest("Grid - Button in StackPanel should a have Click event handler")]
+        [MonitoredTest]
         public void _04_ButtonInStackPanelShouldHaveClickEventHandler()
         {
             Assert.That(HasClickEventHandler(_apply_Button), Is.True, "The button in the StackPanel should have a click event handler.");
         }
 
-        [MonitoredTest("Grid - Inner Grid has 4 rows and 4 columns")]
+        [MonitoredTest]
         public void _05_InnerGridShouldHave4RowsAnd4Columns()
         {
             AssertHasInnerGrid();
             AssertInnerGridHas4RowsAnd4Columns();
         }
 
-        [MonitoredTest("Grid - Inner Grid contains a lightgreen Button")]
+        [MonitoredTest]
         public void _06_InnerGridContainsAButton()
         {
             Assert.That(_innerGrid.Children.OfType<Button>().Count(), Is.EqualTo(1), "Inner Grid should contain a Button");
@@ -79,7 +79,7 @@ namespace Exercise5.Tests
             Assert.That((button.Background as SolidColorBrush)?.Color, Is.EqualTo(Colors.LightGreen), "The button should have a LightGreen backColor");
         }
 
-        [MonitoredTest("Grid - The selected button should have a LightGreen BackColor")]
+        [MonitoredTest]
         public void _07_TheSelectedButtonShouldHaveALightGreenBackColor()
         {
             AssertApplyButton();

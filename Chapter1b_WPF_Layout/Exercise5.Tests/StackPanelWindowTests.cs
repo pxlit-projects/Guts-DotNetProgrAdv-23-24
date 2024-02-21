@@ -33,7 +33,7 @@ namespace Exercise5.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("StackPanel - Window should contain a Grid with 2 rows")]
+        [MonitoredTest]
         public void _01_WindowShouldContainAGridWith2Rows()
         {
             AssertGridHas2Cells();
@@ -55,7 +55,7 @@ namespace Exercise5.Tests
                 "The 'Grid' should be the child control of the 'Window'.");
         }
 
-        [MonitoredTest("StackPanel - First Row of Grid should contain a GroupBox")]
+        [MonitoredTest]
         public void _02_FirstRowOfGridShouldContainAGroupBox()
         {
             AssertGridHasGroupBoxInHisFirstRow();
@@ -68,7 +68,7 @@ namespace Exercise5.Tests
             Assert.That(_groupBox.Header, Is.EqualTo("Orientation"), "The header of the groupBox should be 'Orientation'");
         }
 
-        [MonitoredTest("StackPanel - The GroupBox contains a StackPanel with 2 radiobuttons")]
+        [MonitoredTest]
         public void _03_GroupBoxShouldContainAStackPanelWith2RadioButtons()
         {
             Assert.That(_orientationStackPanel, Is.Not.Null, "There has to be a stackPanel on the window");
@@ -77,7 +77,7 @@ namespace Exercise5.Tests
             Assert.That(_radioButtons.All(r => r.Parent == _orientationStackPanel), Is.True, "All radioButtons have to be inside the StackPanel of the GroupBox");
         }
 
-        [MonitoredTest("StackPanel - The StackPanel should be in the first row of the grid ")] //TODO: second row instead of first row
+        [MonitoredTest]
         public void _04_TheStackPanelShouldBeInTheSecondRowOfTheGrid()
         {
             Assert.That(_stackPanel, Is.Not.Null, "The should be a stackPanel within the Grid");
@@ -86,7 +86,7 @@ namespace Exercise5.Tests
             Assert.That(_buttons.Count, Is.EqualTo(2), "There should be 2 buttons inside the StackPanel");
         }
 
-        [MonitoredTest("StackPanel - There should be an image with an image source on the first button ")]
+        [MonitoredTest]
         public void _05_ThereShouldBeAnImageWithAnImageSourceOnTheFirstButton()
         {
             Image image = _buttons[0].Content as Image;
@@ -96,7 +96,7 @@ namespace Exercise5.Tests
                                                    "For this to work, the image must be present next the exe file (in the output directory) or be a resource of the assembly.");
         }
 
-        [MonitoredTest("StackPanel - The orientation of the StackPanel has to be vertical when clicking the Vertical RadioButton ")]
+        [MonitoredTest]
         public void _06_TheOrientationOfTheStackPanelHasToBecomeVerticalWhenClickingTheVerticalRadioButton()
         {
             RadioButton verticalRadioButton = _radioButtons.FirstOrDefault(r => r.Content.ToString() == "Vertical");
@@ -105,7 +105,7 @@ namespace Exercise5.Tests
             Assert.That(_stackPanel.Orientation, Is.EqualTo(Orientation.Vertical), "The Orientation of the StackPanel is not Vertical.");
         }
 
-        [MonitoredTest("StackPanel - The orientation of the StackPanel has to be horizontal when clicking the Horizontal RadioButton ")]
+        [MonitoredTest]
         public void _07_TheOrientationOfTheWrapPanelHasToBecomeHorizontalWhenClickingTheHorizontalRadioButton()
         {
             RadioButton horizontalRadioButton = _radioButtons.FirstOrDefault(r => r.Content.ToString() == "Horizontal");
