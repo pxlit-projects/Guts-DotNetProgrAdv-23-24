@@ -31,7 +31,7 @@ namespace Exercise7.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise7\MainWindow.xaml.cs";
@@ -40,20 +40,20 @@ namespace Exercise7.Tests
                                                                                     "Undo your changes on the file to make this test pass. " + "This exercise can be completed by purely working with XAML."); 
         }
 
-        [MonitoredTest("Should have a ListView")]
+        [MonitoredTest]
         public void _2_ShouldHaveAListView()
         {
             AssertHasListView();
         }
 
-        [MonitoredTest("The list should have 3 items")]
+        [MonitoredTest]
         public void _3_TheListShouldHave3Items()
         {
             AssertHasListView();
             AssertHasListViewItems();
         }
 
-        [MonitoredTest("Each list item should be correctly formatted")]
+        [MonitoredTest]
         public void _4_EachListItemShouldBeCorrectlyFormatted()
         {
             AssertHasListView();

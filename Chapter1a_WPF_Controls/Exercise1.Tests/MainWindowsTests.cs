@@ -52,21 +52,21 @@ namespace Exercise1.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should not have changed the CodeBehindFile")]
-        [Test]
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
-            
-            var filePath = @"Exercise1\MainWindow.xaml.cs"; 
+
+            var filePath = @"Exercise1\MainWindow.xaml.cs";
             var fileHash = Solution.Current.GetFileHash(filePath);
             Assert.That(fileHash, Is.EqualTo("57-89-1E-07-47-09-92-39-BD-6C-73-7D-98-70-C3-80"),
                 $"The file '{filePath}' has changed. " +
                 "Undo your changes on the file to make this test pass.");
-          
+
         }
 
 
-        [MonitoredTest("Should have a simple button on the top")]
+
+        [MonitoredTest]
         public void _2_ShouldHaveASimpleButtonOnTheTop()
         {
             Assert.That(_simpleButton, Is.Not.Null, () => "The first button (on the top) could not be found.");
@@ -74,7 +74,7 @@ namespace Exercise1.Tests
             Assert.That(_simpleButton.Content, Is.Not.Empty, () => "The content of first button (on the top) should not be empty.");
         }
 
-        [MonitoredTest("Should have a button with an image and text in the middle")]
+        [MonitoredTest]
         public void _3_ShouldHaveAnImageButtonInTheMiddle()
         {
             Assert.That(_imageButton, Is.Not.Null, () => "The second (middle) button could not be found.");
@@ -125,7 +125,7 @@ namespace Exercise1.Tests
                 () => "The 'FontWeight' in the 'TextBlock' in the middle button should be bold.");
         }
 
-        [MonitoredTest("Should have a button on the bottom with a gradient brush as background")]
+        [MonitoredTest]
         public void _4_ShouldHaveAGradientButtonAtTheBottom()
         {
             Assert.That(_gradientButton, Is.Not.Null, () => "The third (bottom) button could not be found.");
@@ -147,7 +147,5 @@ namespace Exercise1.Tests
                 expectedOffset += 0.33;
             }
         }
-
     }
-
 }

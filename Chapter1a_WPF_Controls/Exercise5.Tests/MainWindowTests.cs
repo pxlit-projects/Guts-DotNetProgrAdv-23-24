@@ -31,7 +31,8 @@ namespace Exercise5.Tests
             Dispatcher.CurrentDispatcher.InvokeShutdown();
             _window.Dispose();
         }
-        [MonitoredTest("Should not have changed the codebehind file")]
+
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise5\MainWindow.xaml.cs";
@@ -40,14 +41,14 @@ namespace Exercise5.Tests
                                                                              "Undo your changes on the file to make this test pass. " +
                                                                              "This exercise can be completed by purely working with XAML.");
         }
-        
-        [MonitoredTest("Should have a tree")]
+
+        [MonitoredTest]
         public void _2_ShouldHaveATree()
         {
             AssertHasTree();
         }
 
-        [MonitoredTest("The tree should have two continent items")]
+        [MonitoredTest]
         public void _3_TheTreeShouldHave2ContinentItems()
         {
             AssertHasTree();
@@ -55,7 +56,7 @@ namespace Exercise5.Tests
             Assert.That(_continentItems, Has.All.Matches((TreeViewItem item) => (item.Header as string)?.Length > 0), () => "The 'Header' of the continent items should contain simple text.");
         }
 
-        [MonitoredTest("Each continent item in the tree should have 3 country items")]
+        [MonitoredTest]
         public void _4_EachContinentItemInTheTreeShouldHave3CountryItems()
         {
             AssertHasTree();
@@ -64,7 +65,7 @@ namespace Exercise5.Tests
             Assert.That(_continentItems.ElementAt(1).Items.OfType<TreeViewItem>().ToList(), Has.Count.EqualTo(3), () => "There should be 3 instances of 'TreeViewItem' in the items collection of the 'South America' 'TreeViewItem'.");
         }
 
-        [MonitoredTest("Each country item in the tree should be correctly formatted")]
+        [MonitoredTest]
         public void _5_EachCountryItemInTheTreeShouldBeCorrectlyFormatted()
         {
             AssertHasTree();

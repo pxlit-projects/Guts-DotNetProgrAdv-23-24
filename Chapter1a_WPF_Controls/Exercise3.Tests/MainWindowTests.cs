@@ -41,19 +41,19 @@ namespace Exercise3.Tests
             _window.Dispose();
         }
 
-        [MonitoredTest("Should have 2 (repeat)buttons")]
+        [MonitoredTest]
         public void _1_ShouldHaveTwoRepeatButtons()
         {
             AssertHasButtons();
         }
 
-        [MonitoredTest("Should have a canvas that contains a rectangle")]
+        [MonitoredTest]
         public void _2_ShouldHaveACanvasThatContainsARectangle()
         {
             AssertHasCanvasWithRectangle();
         }
 
-        [MonitoredTest("Should increase the width of the rectangle when the grow button is hold down")]
+        [MonitoredTest]
         public void _3_ShouldIncreaseTheRectangleWidthWhenHoldingTheGrowButton()
         {
             AssertHasButtons();
@@ -63,7 +63,7 @@ namespace Exercise3.Tests
             AssertGrowsAfterClickEvent("The rectangle does not grow further when holding the button.");
         }
 
-        [MonitoredTest("Should decrease the width of the rectangle when the shrink button is hold down")]
+        [MonitoredTest]
         public void _4_ShouldDecreaseTheRectangleWidthWhenHoldingTheShrinkButton()
         {
             AssertHasButtons();
@@ -73,7 +73,7 @@ namespace Exercise3.Tests
             AssertShrinksAfterClickEvent("The rectangle does not shrink further when holding the button.");
         }
 
-        [MonitoredTest("Should not decrease the width of the rectangle under zero")]
+        [MonitoredTest]
         public void _5_ShouldNotDecreaseTheWithOfTheRectangleUnderZero()
         {
             AssertHasButtons();
@@ -89,7 +89,7 @@ namespace Exercise3.Tests
         }
 
 
-        [MonitoredTest("Should not increase the width of the rectangle pass the canvas border")]
+        [MonitoredTest]
         public void _6_ShouldNotIncreaseTheWidhtOfTheRectanglePassTheCanvasBorder()
         {
             AssertHasButtons();

@@ -36,7 +36,8 @@ namespace Exercise4.Tests
             Dispatcher.CurrentDispatcher.InvokeShutdown();
             _window.Dispose();
         }
-        [MonitoredTest("Should not have changed the codebehind file")]
+
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise4\MainWindow.xaml.cs";
@@ -45,14 +46,14 @@ namespace Exercise4.Tests
                                                                              "Undo your changes on the file to make this test pass. " +
                                                                              "This exercise can be completed by purely working with XAML.");
         }
-        
-        [MonitoredTest("Should have a (toggle)button")]
+
+        [MonitoredTest]
         public void _2_ShouldHaveAToggleButton()
         {
             AssertHasToggleButton();
         }
 
-        [MonitoredTest("The (toggle)button should show its (checked) state via its 'Content' property")]
+        [MonitoredTest]
         public void _3_TheToggleButtonShouldShowItsCheckedStateViaItsContentProperty()
         {
             AssertHasToggleButton();
@@ -84,7 +85,7 @@ namespace Exercise4.Tests
                 () => "The 'Value' property of the 'Setter' in the 'Trigger' should be set to 'Uit'.");
         }
 
-        [MonitoredTest("Should have an age groupbox")]
+        [MonitoredTest]
         public void _4_ShouldHaveAnAgeGroupBox()
         {
             AssertHasAgeGroupBox();
@@ -95,7 +96,7 @@ namespace Exercise4.Tests
             Assert.That(checkboxes.First().IsChecked, Is.True, () => "The first 'CheckBox' should have its 'IsChecked' property set to true");
         }
 
-        [MonitoredTest("Should have a gender groupbox")]
+        [MonitoredTest]
         public void _5_ShouldHaveAGenderGroupBox()
         {
             AssertHasGenderGroupBox();
@@ -106,7 +107,7 @@ namespace Exercise4.Tests
             Assert.That(checkboxes.First().IsChecked, Is.True, () => "The first 'RadioButton' should have its 'IsChecked' property set to true");
         }
 
-        [MonitoredTest("Should have all controls in a canvas")]
+        [MonitoredTest]
         public void _6_ShouldHaveAllControlsInACanvas()
         {
             AssertHasToggleButton();

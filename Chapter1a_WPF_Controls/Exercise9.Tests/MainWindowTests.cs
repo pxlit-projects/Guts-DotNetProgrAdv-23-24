@@ -49,8 +49,8 @@ namespace Exercise9.Tests
             Dispatcher.CurrentDispatcher.InvokeShutdown();
             _window.Dispose();
         }
-        
-        [MonitoredTest("Should not have changed the codebehind file")]
+
+        [MonitoredTest]
         public void _1_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise9\MainWindow.xaml.cs";
@@ -60,8 +60,8 @@ namespace Exercise9.Tests
                 $"The file '{codeBehindFilePath}' has changed. " +
                 "Undo your changes on the file to make this test pass.");
         }
-        
-        [MonitoredTest("Should have a simple checkbox on the top")]
+
+        [MonitoredTest]
         public void _2_ShouldHaveASimpleCheckBoxOnTheTop()
         {
             Assert.That(_simpleCheckBox, Is.Not.Null, () => "The first checkbox (on the top) could not be found.");
@@ -69,7 +69,7 @@ namespace Exercise9.Tests
             Assert.That(_simpleCheckBox.Content, Is.Not.Empty, () => "The content of first checkbox (on the top) should not be empty.");
         }
 
-        [MonitoredTest("Should have a kameleon checkbox in the middle")]
+        [MonitoredTest]
         public void _3_ShouldHaveAKameleonCheckBoxInTheMiddle()
         {
             Assert.That(_kameleonCheckBox, Is.Not.Null, () => "The second (middle) checkbox could not be found.");
@@ -143,7 +143,7 @@ namespace Exercise9.Tests
             Assert.That(padLeft > 0 || padRight > 0, Is.True, "There must be some space between the 2 'TextBlock' elements.");
         }
 
-        [MonitoredTest("Should have a checkbox on the bottom with backgrounds")]
+        [MonitoredTest]
         public void _4_ShouldHaveACheckBoxWithBackgroundsAtTheBottom()
         {
             Assert.That(_gradientCheckBox, Is.Not.Null, "The third (bottom) checkbox could not be found.");

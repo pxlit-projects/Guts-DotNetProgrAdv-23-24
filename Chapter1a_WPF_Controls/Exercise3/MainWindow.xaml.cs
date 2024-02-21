@@ -13,13 +13,10 @@ namespace Exercise3
 {
     public partial class MainWindow : Window
     {
-        private readonly double _maximumWidth;
-        private const int GrowOrShrinkAmount = 10;
-
         public MainWindow()
         {
             InitializeComponent();
-        }        
+        }
     }
 
 }
