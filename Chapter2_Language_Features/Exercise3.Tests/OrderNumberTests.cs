@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\OrderAggregate\OrderNumber.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\OrderAggregate\OrderNumber.cs")]
     public class OrderNumberTests
     {
         private Type _type;

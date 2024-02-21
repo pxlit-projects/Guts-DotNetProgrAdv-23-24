@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise1.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", @"Exercise1\BalloonProgram.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise01", @"Exercise1\BalloonProgram.cs")]
     public class BalloonProgramTests
     {
         private TypeInfo _writeDelegateTypeInfo;

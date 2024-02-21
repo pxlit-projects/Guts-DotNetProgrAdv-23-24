@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\FrontDeskAggregate\FrontDesk.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\FrontDeskAggregate\FrontDesk.cs")]
     public class FrontDeskTests
     {
         private static readonly Random Random = new Random();

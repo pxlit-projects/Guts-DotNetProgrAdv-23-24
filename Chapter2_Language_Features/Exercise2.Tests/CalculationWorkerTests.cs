@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Exercise2.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise02", @"Exercise2\CalculationWorker.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise02", @"Exercise2\CalculationWorker.cs")]
     public class CalculationWorkerTests
     {
         private CalculationWorker _worker;

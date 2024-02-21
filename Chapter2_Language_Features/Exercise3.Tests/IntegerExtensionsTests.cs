@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\IntegerExtensions.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\IntegerExtensions.cs")]
     public class IntegerExtensionsTests
     {
         private TypeInfo _integerExtensionsTypeInfo;

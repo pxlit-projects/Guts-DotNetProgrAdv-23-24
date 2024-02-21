@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace Exercise2.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise02", @"Exercise2\MainWindow.xaml.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise02", @"Exercise2\MainWindow.xaml.cs")]
     [RequiresThread(ApartmentState.STA)]
     public class MainWindowTests
     {

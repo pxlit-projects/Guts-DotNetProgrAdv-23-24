@@ -6,9 +6,8 @@ using System.Runtime.CompilerServices;
 
 namespace Exercise1.Tests
 {
-        [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", 
-            @"Exercise1\RandomExtensions.cs;
-    Exercise1\Balloon.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise01",
+        @"Exercise1\RandomExtensions.cs;Exercise1\Balloon.cs")]
     public class RandomExtensionsTests
     {
         private TypeInfo _randomExtensionsTypeInfo;

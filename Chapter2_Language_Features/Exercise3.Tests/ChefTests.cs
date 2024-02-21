@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Exercise3.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise03", @"Exercise3\ChefAggregate\Chef.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise03", @"Exercise3\ChefAggregate\Chef.cs")]
     public class ChefTests
     {
         private static readonly Random Random = new Random();

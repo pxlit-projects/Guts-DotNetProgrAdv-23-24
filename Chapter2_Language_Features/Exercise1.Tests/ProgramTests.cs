@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Exercise1.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H2", "Exercise01", @"Exercise1\Program.cs")]
+    [ExerciseTestFixture("progAdvNet", "H02", "Exercise01", @"Exercise1\Program.cs")]
     public class ProgramTests
     {
         private string _programClassContent;
