@@ -18,7 +18,7 @@ The assignments for each chapter can be found in de README.md in the folder of t
 * [Chapter 1b - WPF Layout](Chapter1b_WPF_Layout/README.md)
 * [Chapter 2 - C# Language features](Chapter2_Language_Features/README.md)
 * [Chapter 3-4 - Databinding, MVVM, Resources, Data Templates](Chapter3-4_DatabindingMVVM_ResourcesDataTemplates/README.md)
-* [Chapter 5 - Onion archtecture](Chapter5_OnionArchitecture/README.md)
+* [Chapter 5 - Onion archtecture](Chapter5_Onion_Architecture/README.md)
 * [Chapter 6 - Entity Framework](Chapter6_EF/readme.md)
 * [Chapter 7 - TDD](Chapter7_TDD/readme.md)
 
