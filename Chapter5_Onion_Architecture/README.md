@@ -1,4 +1,4 @@
-# Exercises - Chapter 6 - Layered Architecture
+# Exercises - Chapter 5 - Onion Architecture
 
 ## Exercise 1 (DartApp)
 In this exercise you will be creating a desktop application 
