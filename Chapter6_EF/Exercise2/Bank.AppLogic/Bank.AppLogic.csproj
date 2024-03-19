@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-windows8.0</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bank.Domain\Bank.Domain.csproj" />
-  </ItemGroup>
-</Project>
