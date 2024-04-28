@@ -4,8 +4,7 @@ using Lottery.Infrastructure;
 
 namespace Lottery.Tests
 {
-    [TestFixture]
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01", @"Lottery.Infrastructure\LotteryGameRepository.cs")]
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01", @"Lottery.Infrastructure\LotteryGameRepository.cs")]
     internal class LotteryGameRepositoryTests : DatabaseTests
     {
         [MonitoredTest]

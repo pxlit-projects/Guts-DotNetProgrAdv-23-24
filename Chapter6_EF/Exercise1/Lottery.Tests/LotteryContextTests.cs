@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 namespace Lottery.Tests
 {
     [TestFixture]
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01", @"Lottery.Infrastructure\LotteryContext.cs")]
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01", @"Lottery.Infrastructure\LotteryContext.cs")]
     internal class LotteryContextTests : DatabaseTests
     {
         private string _lotterContextClassContent;

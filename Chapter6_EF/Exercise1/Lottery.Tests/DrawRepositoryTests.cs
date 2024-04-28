@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Lottery.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01", 
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01", 
         @"Lottery.Infrastructure\DrawRepository.cs")]
     internal class DrawRepositoryTests : DatabaseTests
     {

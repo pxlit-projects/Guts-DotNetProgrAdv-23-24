@@ -12,7 +12,7 @@ using System.Windows.Data;
 
 namespace Lottery.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01", @"Lottery.UI\LotteryWindow.xaml;Lottery.UI\LotteryWindow.xaml.cs"),
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01", @"Lottery.UI\LotteryWindow.xaml;Lottery.UI\LotteryWindow.xaml.cs"),
     Apartment(ApartmentState.STA)]
     public class LotteryWindowTests
     {

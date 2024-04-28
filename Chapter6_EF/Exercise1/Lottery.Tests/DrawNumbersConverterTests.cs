@@ -4,7 +4,7 @@ using Lottery.UI.Converters;
 
 namespace Lottery.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01",
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01",
         @"Lottery.UI\Converters\DrawNumbersConverter.cs;")]
     public class DrawNumbersConverterTests
     {

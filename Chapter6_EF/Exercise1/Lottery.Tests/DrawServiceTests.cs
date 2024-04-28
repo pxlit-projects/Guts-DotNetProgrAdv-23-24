@@ -8,7 +8,7 @@ using Moq;
 
 namespace Lottery.Tests
 {
-    [ExerciseTestFixture("progAdvNet", "H05", "Exercise01", @"Lottery.AppLogic\DrawService.cs")]
+    [ExerciseTestFixture("progAdvNet", "H06", "Exercise01", @"Lottery.AppLogic\DrawService.cs")]
     public class DrawServiceTests
     {
         private Mock<IDrawRepository> _drawRepositoryMock;
