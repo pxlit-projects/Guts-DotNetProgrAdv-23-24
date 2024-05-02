@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Bank.Tests
 {
     [ExerciseTestFixture("progAdvNet", "H06", "Exercise02",
-        @"Bank.Data\CityRepository.cs")]
+        @"Bank.Infrastructure\CityRepository.cs")]
     internal class CityRepositoryTests : DatabaseTests
     {
         [MonitoredTest]
