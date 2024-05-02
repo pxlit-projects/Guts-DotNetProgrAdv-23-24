@@ -12,7 +12,7 @@ namespace Lottery.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured) //only configure the connection if the parameterless contructor was used (no options where provided).
+            if (!optionsBuilder.IsConfigured) //only configure the connection if the parameterless constructor was used (no options where provided).
             {
                 //TODO: tell EF (Entity Framework) that is going to operate against a SQL Server database using the connection string in the app.config of the UI project
             }

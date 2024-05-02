@@ -54,7 +54,7 @@ namespace Lottery.Tests
             var someGame = new LotteryGameBuilder()
                 .WithId()
                 .WithMaximumNumber(3)
-                .WithMaximumNumberOfNumbersInADrawy(2)
+                .WithMaximumNumberOfNumbersInADraw(2)
                 .Build();
 
             var amountOfRunsToRuleOutRandomness = 20;

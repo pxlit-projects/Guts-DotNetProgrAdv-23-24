@@ -15,8 +15,8 @@ namespace Lottery.Tests
         public void Find_ShouldReturnAllDrawsOfAGameWhenThereAreNoDateLimits()
         {
             //Arrange
-            var someGame = new LotteryGameBuilder().WithId().WithRandomDraws(5, 10).Build();
-            var someOtherGame = new LotteryGameBuilder().WithId().WithRandomDraws(5, 10).Build();
+            var someGame = new LotteryGameBuilder().WithRandomDraws(5, 10).Build();
+            var someOtherGame = new LotteryGameBuilder().WithRandomDraws(5, 10).Build();
 
             using (var context = CreateDbContext())
             {
@@ -47,7 +47,7 @@ namespace Lottery.Tests
         {
             //Arrange
             var fromDate = DateTime.Now.AddDays(-1);
-            var someGame = new LotteryGameBuilder().WithId().WithDrawsAroundDateRange(fromDate, null).Build();
+            var someGame = new LotteryGameBuilder().WithDrawsAroundDateRange(fromDate, null).Build();
 
             using (var context = CreateDbContext())
             {
@@ -65,7 +65,7 @@ namespace Lottery.Tests
         {
             //Arrange
             var untilDate = DateTime.Now.AddDays(-1);
-            var someGame = new LotteryGameBuilder().WithId().WithDrawsAroundDateRange(null, untilDate).Build();
+            var someGame = new LotteryGameBuilder().WithDrawsAroundDateRange(null, untilDate).Build();
 
             using (var context = CreateDbContext())
             {
@@ -84,7 +84,7 @@ namespace Lottery.Tests
             //Arrange
             var fromDate = DateTime.Now.AddDays(-10);
             var untilDate = DateTime.Now.AddDays(-1);
-            var someGame = new LotteryGameBuilder().WithId().WithDrawsAroundDateRange(fromDate, untilDate).Build();
+            var someGame = new LotteryGameBuilder().WithDrawsAroundDateRange(fromDate, untilDate).Build();
 
             using (var context = CreateDbContext())
             {
@@ -101,7 +101,7 @@ namespace Lottery.Tests
         public void Find_ShouldIncludeTheDrawNumbersOfTheReturnedDraws()
         {
             //Arrange
-            var someGame = new LotteryGameBuilder().WithId().WithRandomDraws(1, 1).Build();
+            var someGame = new LotteryGameBuilder().WithRandomDraws(1, 1).Build();
 
             using (var context = CreateDbContext())
             {
@@ -151,14 +151,14 @@ namespace Lottery.Tests
         public void Add_ShouldAddADrawToTheDatabase()
         {
             //Arrange
-            var someGame = new LotteryGameBuilder().WithId().Build();
+            var someGame = new LotteryGameBuilder().Build();
             using (var context = CreateDbContext())
             {
                 context.Add(someGame);
                 context.SaveChanges();
             }
 
-            var newDraw = new DrawBuilder().WithDrawId().WithLotteryGameId(someGame.Id).WithRandomDrawNumbers(1, 1).Build();
+            var newDraw = new DrawBuilder().WithLotteryGameId(someGame.Id).WithRandomDrawNumbers(1, 1).Build();
 
             using (var context = CreateDbContext())
             {
@@ -181,39 +181,35 @@ namespace Lottery.Tests
         {
             var newDraw = new DrawBuilder().Build();
 
-            using (var context = CreateDbContext())
-            {
-                var repo = new DrawRepository(context);
+            using var context = CreateDbContext();
+            var repo = new DrawRepository(context);
 
-                newDraw.DrawNumbers = null;
-                Assert.That(() => repo.Add(newDraw), Throws.ArgumentException,
-                    () => "Should throw an 'ArgumentException' when 'DrawNumbers' is null.");
+            newDraw.DrawNumbers = null;
+            Assert.That(() => repo.Add(newDraw), Throws.ArgumentException,
+                () => "Should throw an 'ArgumentException' when 'DrawNumbers' is null.");
 
-                newDraw.DrawNumbers = new List<DrawNumber>();
-                Assert.That(() => repo.Add(newDraw), Throws.ArgumentException,
-                    () => "Should throw an 'ArgumentException' when 'DrawNumbers' is empty.");
-            }
+            newDraw.DrawNumbers = new List<DrawNumber>();
+            Assert.That(() => repo.Add(newDraw), Throws.ArgumentException,
+                () => "Should throw an 'ArgumentException' when 'DrawNumbers' is empty.");
         }
 
         private void TestFindForDateRange(int gameId, DateTime? fromDate, DateTime? untilDate, IList<Draw> expectedDraws)
         {
-            using (var context = CreateDbContext())
-            {
-                var repo = new DrawRepository(context);
+            using var context = CreateDbContext();
+            var repo = new DrawRepository(context);
 
-                //Act
-                var draws = repo.Find(gameId, fromDate, untilDate);
+            //Act
+            var draws = repo.Find(gameId, fromDate, untilDate);
 
-                //Assert
-                Assert.That(draws, Is.Not.Empty, () => "No draws are returned.");
+            //Assert
+            Assert.That(draws, Is.Not.Empty, () => "No draws are returned.");
 
-                Assert.That(draws, Has.Count.LessThanOrEqualTo(expectedDraws.Count),
-                    () => "One or more draws that are out of range are returned.");
+            Assert.That(draws, Has.Count.LessThanOrEqualTo(expectedDraws.Count),
+                () => "One or more draws that are out of range are returned.");
 
-                Assert.That(draws, Has.Count.EqualTo(expectedDraws.Count),
-                    () => "Not all draws that match the date range are returned. " +
-                          "Make sure you also include the draws exactly on the from date or until date.");
-            }
+            Assert.That(draws, Has.Count.EqualTo(expectedDraws.Count),
+                () => "Not all draws that match the date range are returned. " +
+                      "Make sure you also include the draws exactly on the from date or until date.");
         }
     }
 }

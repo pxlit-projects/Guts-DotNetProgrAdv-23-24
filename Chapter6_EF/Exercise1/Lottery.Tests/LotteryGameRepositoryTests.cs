@@ -11,14 +11,7 @@ namespace Lottery.Tests
         public void GetAll_ShouldReturnAllGamesFromDb()
         {
             //Arrange
-            var someGame = new LotteryGame
-            {   
-                Id=1024,
-                Name = Guid.NewGuid().ToString(),
-                NumberOfNumbersInADraw = 6,
-                MaximumNumber = 45
-
-            };
+            var someGame = new LotteryGameBuilder().Build();
             var originalAmountOfGames = 0;
 
             using (var context = CreateDbContext())

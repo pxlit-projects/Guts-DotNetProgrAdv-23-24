@@ -11,7 +11,7 @@ namespace Lottery.Tests
         {
             _random = new Random();
             _game = new LotteryGame
-            {              
+            {
                 Name = Guid.NewGuid().ToString(),
                 MaximumNumber = _random.Next(1, 100)
             };
@@ -30,7 +30,7 @@ namespace Lottery.Tests
             return this;
         }
 
-        public LotteryGameBuilder WithMaximumNumberOfNumbersInADrawy(int numberOfNumbersInADraw)
+        public LotteryGameBuilder WithMaximumNumberOfNumbersInADraw(int numberOfNumbersInADraw)
         {
             _game.NumberOfNumbersInADraw = numberOfNumbersInADraw;
             return this;
@@ -42,7 +42,7 @@ namespace Lottery.Tests
             var amountOfDraws = _random.Next(minimumAmountOfDraws, maximumAmountOfDraws + 1);
             for (int i = 0; i < amountOfDraws; i++)
             {
-                var draw = new DrawBuilder().WithDrawId().WithRandomDrawNumbers(1, 10).Build();
+                var draw = new DrawBuilder().WithRandomDrawNumbers(1, 10).Build();
                 _game.Draws.Add(draw);
             }
             return this;
@@ -54,16 +54,16 @@ namespace Lottery.Tests
 
             if (from.HasValue)
             {
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(from.Value.AddMinutes(-1)).Build());
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(from.Value).Build());
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(from.Value.AddMinutes(1)).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(from.Value.AddMinutes(-1)).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(from.Value).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(from.Value.AddMinutes(1)).Build());
             }
 
             if (until.HasValue)
             {
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(until.Value.AddMinutes(-1)).Build());
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(until.Value).Build());
-                _game.Draws.Add(new DrawBuilder().WithDrawId().WithDate(until.Value.AddMinutes(1)).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(until.Value.AddMinutes(-1)).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(until.Value).Build());
+                _game.Draws.Add(new DrawBuilder().WithDate(until.Value.AddMinutes(1)).Build());
             }
 
             return this;
@@ -73,5 +73,6 @@ namespace Lottery.Tests
         {
             return _game;
         }
+
     }
 }

@@ -16,12 +16,6 @@ namespace Lottery.Tests
             };
         }
 
-        public DrawBuilder WithDrawId()
-        {
-            _draw.Id = _random.Next();
-            return this;
-        }
-
         public DrawBuilder WithLotteryGameId(int gameId)
         {
             _draw.LotteryGameId = gameId;
